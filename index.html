@@ -471,7 +471,7 @@
 <div class="intro">
   <div class="intro-card">
     <h2>Hoe werkt het?</h2>
-    <p>Vul hieronder jouw voorspellingen in. Je geeft aan wat jij denkt dat de uitslag wordt van de Nederland-wedstrijden, wie er als nummer 1 en 2 per groep eindigt, en wie de kwartfinale, halve finale en finale wint. Na het WK tellen we de punten op en bekijken we wie de beste voorspeller van Langs de Ley is!</p>
+    <p>Vul hieronder jouw voorspellingen in. Je geeft aan wat jij denkt dat de uitslag wordt van de wedstrijden gespeeld door Nederland in de groepsfase, wie er als nummer 1 en 2 per groep eindigt, en wie de kwartfinale, halve finale en finale wint. Na het WK tellen we de punten op en bekijken we wie de beste voorspeller van Langs de Ley is!</p>
   </div>
 </div>
 
@@ -920,6 +920,16 @@
           <input type="text" name="winnaar" placeholder="Wereldkampioen" required>
         </div>
 
+
+        <div class="ko-row" style="border-left-color: var(--gold); background: var(--off-white);">
+          <div class="ko-label" style="color:var(--gold)">🎯 Tiebreak-vraag
+            <span>Bij gelijke stand beslist deze vraag!</span>
+          </div>
+          <label style="font-size:0.8rem;color:#555;margin-bottom:6px;display:block">Hoeveel goals worden er in totaal gescoord tijdens het hele WK 2026?</label>
+          <input type="number" min="0" max="500" name="tiebreak_goals" placeholder="Jouw schatting" required>
+          <p style="font-size:0.75rem;color:#999;margin-top:6px;font-style:italic">Degene die het dichtstbij zit wint bij gelijke punten.</p>
+        </div>
+
         <div class="ko-row" style="border-left-color: #999;">
           <div class="ko-label">🥉 Derde plaats
             <span>Wie wint de troostfinale?</span>
@@ -934,6 +944,95 @@
   <div id="success-msg">
     <h3>✅ Voorspelling ontvangen!</h3>
     <p>Bedankt voor je deelname. Veel succes – en kom de Ley niet in van spanning! ⚽</p>
+  </div>
+
+
+  <!-- PUNTENTELLING -->
+  <div class="section-card">
+    <div class="section-header">
+      <span class="icon">📊</span>
+      <h2>Puntentelling</h2>
+      <span class="badge">HOE WERKT HET?</span>
+    </div>
+    <div class="section-body">
+      <p style="font-size:0.85rem;color:#666;margin-bottom:16px">Zo worden jouw voorspellingen beoordeeld na afloop van het WK:</p>
+
+      <div class="match-grid">
+
+        <div class="match-row" style="border-left-color: var(--gold);">
+          <div class="match-meta">🇳🇱 Nederland-wedstrijden</div>
+          <table style="width:100%;border-collapse:collapse;font-size:0.88rem;">
+            <tr>
+              <td style="padding:5px 0;color:#333">Juiste uitslag (bijv. 2-1 voorspeld én 2-1 geworden)</td>
+              <td style="text-align:right;font-weight:700;color:var(--navy)">3 punten</td>
+            </tr>
+            <tr style="border-top:1px solid #eee">
+              <td style="padding:5px 0;color:#333">Juiste winnaar of gelijkspel, maar verkeerde cijfers</td>
+              <td style="text-align:right;font-weight:700;color:var(--navy)">1 punt</td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="match-row" style="border-left-color: var(--gold);">
+          <div class="match-meta">🏆 Groepsfase – nummers 1 & 2</div>
+          <table style="width:100%;border-collapse:collapse;font-size:0.88rem;">
+            <tr>
+              <td style="padding:5px 0;color:#333">Juiste nummer 1 per groep (12 groepen)</td>
+              <td style="text-align:right;font-weight:700;color:var(--navy)">2 punten</td>
+            </tr>
+            <tr style="border-top:1px solid #eee">
+              <td style="padding:5px 0;color:#333">Juiste nummer 2 per groep (12 groepen)</td>
+              <td style="text-align:right;font-weight:700;color:var(--navy)">2 punten</td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="match-row" style="border-left-color: var(--gold);">
+          <div class="match-meta">⚡ Knock-out fase</div>
+          <table style="width:100%;border-collapse:collapse;font-size:0.88rem;">
+            <tr>
+              <td style="padding:5px 0;color:#333">Juiste kwartfinalist (4 landen)</td>
+              <td style="text-align:right;font-weight:700;color:var(--navy)">2 punten per land</td>
+            </tr>
+            <tr style="border-top:1px solid #eee">
+              <td style="padding:5px 0;color:#333">Juiste finalist (2 landen)</td>
+              <td style="text-align:right;font-weight:700;color:var(--navy)">3 punten per land</td>
+            </tr>
+            <tr style="border-top:1px solid #eee">
+              <td style="padding:5px 0;color:#333">🥉 Juiste derde plaats</td>
+              <td style="text-align:right;font-weight:700;color:var(--navy)">2 punten</td>
+            </tr>
+            <tr style="border-top:1px solid #eee">
+              <td style="padding:5px 0;color:#333">🏆 Juiste wereldkampioen</td>
+              <td style="text-align:right;font-weight:700;color:var(--gold);font-size:1rem">5 punten</td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="match-row" style="background:var(--navy);border-left-color:var(--gold);">
+          <div class="match-meta" style="color:rgba(255,255,255,0.6)">Maximum te behalen punten</div>
+          <table style="width:100%;border-collapse:collapse;font-size:0.88rem;">
+            <tr>
+              <td style="padding:3px 0;color:rgba(255,255,255,0.85)">Nederland-wedstrijden (3 × 3)</td>
+              <td style="text-align:right;font-weight:700;color:var(--gold-light)">9 punten</td>
+            </tr>
+            <tr>
+              <td style="padding:3px 0;color:rgba(255,255,255,0.85)">Groepsfase (12 × 2 + 12 × 2)</td>
+              <td style="text-align:right;font-weight:700;color:var(--gold-light)">48 punten</td>
+            </tr>
+            <tr>
+              <td style="padding:3px 0;color:rgba(255,255,255,0.85)">Knock-out fase</td>
+              <td style="text-align:right;font-weight:700;color:var(--gold-light)">19 punten</td>
+            </tr>
+            <tr style="border-top:1px solid rgba(255,255,255,0.2);margin-top:4px">
+              <td style="padding:5px 0;color:white;font-weight:700">Totaal maximum</td>
+              <td style="text-align:right;font-weight:700;color:var(--gold-light);font-size:1.1rem">76 punten</td>
+            </tr>
+          </table>
+        </div>
+
+      </div>
+    </div>
   </div>
 
 </form>
@@ -986,13 +1085,16 @@ KNOCK-OUT FASE
 Kwartfinale (4 door): ${data.kf1}, ${data.kf2}, ${data.kf3}, ${data.kf4}
 Halve finale (2 door): ${data.hf1}, ${data.hf2}
 Derde plaats: ${data.derde}
-🏆 WERELDKAMPIOEN: ${data.winnaar}`;
+🏆 WERELDKAMPIOEN: ${data.winnaar}
+
+TIEBREAK
+Aantal goals WK totaal: ${data.tiebreak_goals}`;
 
   const subject = encodeURIComponent('WK Poule 2026 – Voorspelling van ' + data.naam);
   const bodyEncoded = encodeURIComponent(body);
 
   // Open mail-client van de gebruiker
-  window.location.href = `mailto:JOUW_EMAIL@INVULLEN.nl?subject=${subject}&body=${bodyEncoded}`;
+  window.location.href = `mailto:langsdeley@plusjack.nl?subject=${subject}&body=${bodyEncoded}`;
 
   // Toon succesbericht
   document.getElementById('success-msg').style.display = 'block';
