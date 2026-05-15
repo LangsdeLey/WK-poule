@@ -468,6 +468,15 @@
 </header>
 <div class="gold-bar"></div>
 
+<div style="max-width:800px;margin:20px auto 0;padding:0 20px;">
+  <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">
+    <a href="index.html" style="background:var(--gold);color:var(--navy);padding:8px 18px;border-radius:20px;text-decoration:none;font-size:.85rem;font-weight:700;letter-spacing:.03em;">⚽ Poule invullen</a>
+    <a href="scorebord.html" style="background:var(--navy);color:white;padding:8px 18px;border-radius:20px;text-decoration:none;font-size:.85rem;font-weight:600;letter-spacing:.03em;">🏆 Scorebord</a>
+    <a href="tiplijst.html" style="background:var(--navy);color:white;padding:8px 18px;border-radius:20px;text-decoration:none;font-size:.85rem;font-weight:600;letter-spacing:.03em;">📊 Tiplijst groepsfase</a>
+    <a href="speelschema.html" style="background:var(--navy);color:white;padding:8px 18px;border-radius:20px;text-decoration:none;font-size:.85rem;font-weight:600;letter-spacing:.03em;">📅 Speelschema</a>
+  </div>
+</div>
+
 <div class="intro">
   <div class="intro-card">
     <h2>Hoe werkt het?</h2>
@@ -1065,38 +1074,53 @@ function handleSubmit(e) {
 
   // Bouw een leesbare samenvatting
   const body = `WK POULE 2026 – LANGS DE LEY
-================================
-Naam: ${data.naam}
-Appartement: ${data.appartement}
-E-mail: ${data.email || '–'}
-
-NEDERLAND-WEDSTRIJDEN
-Nederland vs Japan:   ${data.nl1_thuis} – ${data.nl1_uit}
-Nederland vs Zweden:  ${data.nl2_thuis} – ${data.nl2_uit}
-Tunesië vs Nederland: ${data.nl3_thuis} – ${data.nl3_uit}
-
-GROEPSWINNAARS (nr.1 / nr.2)
-Groep A: ${data.grpA_1} / ${data.grpA_2}
-Groep B: ${data.grpB_1} / ${data.grpB_2}
-Groep C: ${data.grpC_1} / ${data.grpC_2}
-Groep D: ${data.grpD_1} / ${data.grpD_2}
-Groep E: ${data.grpE_1} / ${data.grpE_2}
-Groep F: ${data.grpF_1} / ${data.grpF_2}
-Groep G: ${data.grpG_1} / ${data.grpG_2}
-Groep H: ${data.grpH_1} / ${data.grpH_2}
-Groep I: ${data.grpI_1} / ${data.grpI_2}
-Groep J: ${data.grpJ_1} / ${data.grpJ_2}
-Groep K: ${data.grpK_1} / ${data.grpK_2}
-Groep L: ${data.grpL_1} / ${data.grpL_2}
-
-KNOCK-OUT FASE
-Kwartfinale (4 door): ${data.kf1}, ${data.kf2}, ${data.kf3}, ${data.kf4}
-Halve finale (2 door): ${data.hf1}, ${data.hf2}
-Derde plaats: ${data.derde}
-🏆 WERELDKAMPIOEN: ${data.winnaar}
-
-TIEBREAK
-Aantal goals WK totaal: ${data.tiebreak_goals}`;
+====================================================
+PLAK ALLES HIERONDER IN EEN KOLOM IN EXCEL
+====================================================
+NAAM:${data.naam}
+APPARTEMENT:${data.appartement}
+EMAIL:${data.email || '-'}
+---
+NL-JAPAN:${data.nl1_thuis}-${data.nl1_uit}
+NL-ZWEDEN:${data.nl2_thuis}-${data.nl2_uit}
+TUNESIE-NL:${data.nl3_thuis}-${data.nl3_uit}
+---
+GRP-A-1:${data.grpA_1}
+GRP-A-2:${data.grpA_2}
+GRP-B-1:${data.grpB_1}
+GRP-B-2:${data.grpB_2}
+GRP-C-1:${data.grpC_1}
+GRP-C-2:${data.grpC_2}
+GRP-D-1:${data.grpD_1}
+GRP-D-2:${data.grpD_2}
+GRP-E-1:${data.grpE_1}
+GRP-E-2:${data.grpE_2}
+GRP-F-1:${data.grpF_1}
+GRP-F-2:${data.grpF_2}
+GRP-G-1:${data.grpG_1}
+GRP-G-2:${data.grpG_2}
+GRP-H-1:${data.grpH_1}
+GRP-H-2:${data.grpH_2}
+GRP-I-1:${data.grpI_1}
+GRP-I-2:${data.grpI_2}
+GRP-J-1:${data.grpJ_1}
+GRP-J-2:${data.grpJ_2}
+GRP-K-1:${data.grpK_1}
+GRP-K-2:${data.grpK_2}
+GRP-L-1:${data.grpL_1}
+GRP-L-2:${data.grpL_2}
+---
+KF-1:${data.kf1}
+KF-2:${data.kf2}
+KF-3:${data.kf3}
+KF-4:${data.kf4}
+HF-1:${data.hf1}
+HF-2:${data.hf2}
+DERDE:${data.derde}
+KAMPIOEN:${data.winnaar}
+---
+TIEBREAK:${data.tiebreak_goals}
+====================================================`;
 
   const subject = encodeURIComponent('WK Poule 2026 – Voorspelling van ' + data.naam);
   const bodyEncoded = encodeURIComponent(body);
