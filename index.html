@@ -1490,9 +1490,22 @@
 
 <div class="submit-wrap">
   <button type="submit" form="poule-form" class="submit-btn">
-    <span>📨 &nbsp; Stuur mijn voorspelling in</span>
+    <span>📨 &nbsp; Verstuur per e-mail</span>
   </button>
-  <p class="submit-note">Je voorspelling wordt per e-mail verstuurd naar de poule-organisatie.</p>
+  <p class="submit-note">Opent je e-mailprogramma met de voorspelling kant-en-klaar ingevuld.</p>
+
+  <button type="button" onclick="kopieerVoorspelling()" class="submit-btn" id="kopieer-btn"
+    style="margin-top:14px;background:linear-gradient(135deg,#2a5298 0%,#1a3d73 100%);">
+    <span>📋 &nbsp; Kopieer voorspelling</span>
+  </button>
+  <p class="submit-note">Geen e-mailapp? Kopieer de tekst en stuur die via WhatsApp naar de organisatie, of lever hem persoonlijk in. De tekst heeft een vaste opmaak zodat de organisatie hem makkelijk kan verwerken.</p>
+
+  <div id="kopieer-bevestiging" style="display:none;background:#2a7a3b;color:white;
+    border-radius:12px;padding:16px;text-align:center;margin-top:14px;">
+    <strong>✅ Gekopieerd!</strong><br>
+    <span style="font-size:.85rem;opacity:.9">Plak de tekst (Ctrl+V) in een e-mail, WhatsApp-bericht of rechtstreeks in Excel.</span>
+  </div>
+
   <a href="#top" class="back-to-top">↑ Terug naar boven</a>
 
 </div>
@@ -1503,13 +1516,8 @@
 </footer>
 
 <script>
-function handleSubmit(e) {
-  e.preventDefault();
-  const fd = new FormData(e.target);
-  const data = Object.fromEntries(fd.entries());
-
-  // Bouw een leesbare samenvatting
-  const body = `WK POULE 2026 – LANGS DE LEY
+function bouwTekst(data) {
+  return `WK POULE 2026 – LANGS DE LEY
 ====================================================
 PLAK ALLES HIERONDER IN EEN KOLOM IN EXCEL
 ====================================================
@@ -1557,6 +1565,43 @@ KAMPIOEN:${data.winnaar}
 ---
 TIEBREAK:${data.tiebreak_goals}
 ====================================================`;
+}
+
+function kopieerVoorspelling() {
+  const form = document.getElementById('poule-form');
+  // Check required fields
+  if (!form.checkValidity()) {
+    form.reportValidity();
+    return;
+  }
+  const fd = new FormData(form);
+  const data = Object.fromEntries(fd.entries());
+  const tekst = bouwTekst(data);
+  navigator.clipboard.writeText(tekst).then(() => {
+    document.getElementById('kopieer-bevestiging').style.display = 'block';
+    document.getElementById('kopieer-btn').querySelector('span').textContent = '✅  Gekopieerd!';
+    setTimeout(() => {
+      document.getElementById('kopieer-btn').querySelector('span').textContent = '📋   Kopieer voorspelling';
+      document.getElementById('kopieer-bevestiging').style.display = 'none';
+    }, 4000);
+  }).catch(() => {
+    // Fallback for older browsers
+    const ta = document.createElement('textarea');
+    ta.value = tekst;
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    document.getElementById('kopieer-bevestiging').style.display = 'block';
+  });
+}
+
+function handleSubmit(e) {
+  e.preventDefault();
+  const fd = new FormData(e.target);
+  const data = Object.fromEntries(fd.entries());
+
+  const body = bouwTekst(data);
 
   const subject = encodeURIComponent('WK Poule 2026 – Voorspelling van ' + data.naam);
   const bodyEncoded = encodeURIComponent(body);
