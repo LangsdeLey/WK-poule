@@ -1496,14 +1496,14 @@
 
   <button type="button" onclick="kopieerVoorspelling()" class="submit-btn" id="kopieer-btn"
     style="margin-top:14px;background:linear-gradient(135deg,#2a5298 0%,#1a3d73 100%);">
-    <span>📋 &nbsp; Kopieer voor WhatsApp / e-mail</span>
+    <span>📋 &nbsp; Kopieer voorspelling</span>
   </button>
-  <p class="submit-note">Geen e-mailapp? Kopieer de tekst en stuur die via WhatsApp naar de organisatie, of lever hem persoonlijk in.</p>
+  <p class="submit-note">Geen e-mailapp? Kopieer je voorspelling en stuur die via WhatsApp naar de organisatie, of lever hem persoonlijk in. De organisatie plakt hem direct in Excel.</p>
 
   <div id="kopieer-bevestiging" style="display:none;background:#2a7a3b;color:white;
     border-radius:12px;padding:16px;text-align:center;margin-top:14px;">
     <strong>✅ Gekopieerd!</strong><br>
-    <span style="font-size:.85rem;opacity:.9">Plak de tekst (Ctrl+V) in WhatsApp of een e-mail.</span>
+    <span style="font-size:.85rem;opacity:.9">Plak de tekst (Ctrl+V) in WhatsApp, of geef hem door aan de organisatie.</span>
   </div>
 
 
@@ -1517,6 +1517,40 @@
 </footer>
 
 <script>
+function bouwExcelWaarden(data) {
+  // Alleen waarden, één per regel, exact matching met Excel rijen
+  // Lege regel op separator-rijen zodat Ctrl+V perfect uitlijnt
+  return [
+    data.naam,
+    data.appartement,
+    data.email || '',
+    '',
+    data.nl1_thuis + '-' + data.nl1_uit,
+    data.nl2_thuis + '-' + data.nl2_uit,
+    data.nl3_thuis + '-' + data.nl3_uit,
+    '',
+    data.grpA_1, data.grpA_2,
+    data.grpB_1, data.grpB_2,
+    data.grpC_1, data.grpC_2,
+    data.grpD_1, data.grpD_2,
+    data.grpE_1, data.grpE_2,
+    data.grpF_1, data.grpF_2,
+    data.grpG_1, data.grpG_2,
+    data.grpH_1, data.grpH_2,
+    data.grpI_1, data.grpI_2,
+    data.grpJ_1, data.grpJ_2,
+    data.grpK_1, data.grpK_2,
+    data.grpL_1, data.grpL_2,
+    '',
+    data.kf1, data.kf2, data.kf3, data.kf4,
+    data.hf1, data.hf2,
+    data.derde,
+    data.winnaar,
+    '',
+    data.tiebreak_goals
+  ].join('\n');
+}
+
 function bouwTekst(data) {
   return `WK POULE 2026 – LANGS DE LEY
 ====================================================
