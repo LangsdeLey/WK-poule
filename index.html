@@ -1604,14 +1604,10 @@ TIEBREAK:${data.tiebreak_goals}
 
 function kopieerVoorspelling() {
   const form = document.getElementById('poule-form');
-  // Check required fields
-  if (!form.checkValidity()) {
-    form.reportValidity();
-    return;
-  }
+  if (!form.checkValidity()) { form.reportValidity(); return; }
   const fd = new FormData(form);
   const data = Object.fromEntries(fd.entries());
-  const tekst = bouwTekst(data);
+  const tekst = bouwExcelWaarden(data);
   navigator.clipboard.writeText(tekst).then(() => {
     document.getElementById('kopieer-bevestiging').style.display = 'block';
     document.getElementById('kopieer-btn').querySelector('span').textContent = '✅  Gekopieerd!';
@@ -1620,13 +1616,9 @@ function kopieerVoorspelling() {
       document.getElementById('kopieer-bevestiging').style.display = 'none';
     }, 4000);
   }).catch(() => {
-    // Fallback for older browsers
     const ta = document.createElement('textarea');
-    ta.value = tekst;
-    document.body.appendChild(ta);
-    ta.select();
-    document.execCommand('copy');
-    document.body.removeChild(ta);
+    ta.value = tekst; document.body.appendChild(ta);
+    ta.select(); document.execCommand('copy'); document.body.removeChild(ta);
     document.getElementById('kopieer-bevestiging').style.display = 'block';
   });
 }
