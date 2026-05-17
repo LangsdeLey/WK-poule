@@ -3,117 +3,93 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Speelschema – WK 2026 – Langs de Ley</title>
+<title>Speelschema WK 2026 – Langs de Ley</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --navy:#0d2a54; --navy-light:#1a3d73; --gold:#c9952a;
-    --gold-light:#f0b93a; --white:#ffffff; --off-white:#f7f5f0; --gray:#e8e4dc;
+    --navy:#0d2a54; --gold:#c9952a; --gold-light:#f0b93a;
+    --oranje:#FF6600; --off-white:#f7f5f0; --gray:#e8e4dc; --white:#ffffff;
   }
   * { box-sizing:border-box; margin:0; padding:0; }
   body { font-family:'DM Sans',sans-serif; background:var(--off-white); color:#1a1a2e; }
-
   header { background:var(--navy); position:relative; overflow:hidden; }
   header::before { content:''; position:absolute; inset:0;
     background:radial-gradient(ellipse at 20% 50%,rgba(201,149,42,.15) 0%,transparent 60%); }
-  .header-inner { max-width:900px; margin:0 auto; padding:24px 20px 20px;
+  .header-inner { max-width:960px; margin:0 auto; padding:24px 20px 20px;
     display:flex; flex-direction:column; align-items:center; gap:14px; position:relative; z-index:1; }
-  .logo-wrap { background:white; border-radius:14px; padding:12px 22px;
-    box-shadow:0 6px 28px rgba(0,0,0,.35); }
-  .logo-wrap img { height:90px; width:auto; display:block; }
+  .logo-wrap { background:white; border-radius:14px; padding:12px 22px; box-shadow:0 6px 28px rgba(0,0,0,.35); }
+  .logo-wrap img { height:80px; width:auto; display:block; }
   .header-title { text-align:center; }
-  .header-title h1 { font-family:'Bebas Neue',sans-serif; font-size:clamp(2.4rem,7vw,3.8rem);
+  .header-title h1 { font-family:'Bebas Neue',sans-serif; font-size:clamp(2.2rem,6vw,3.5rem);
     color:white; letter-spacing:.06em; line-height:.95; }
   .header-title h1 span { color:var(--gold-light); }
-  .header-title p { color:rgba(255,255,255,.7); font-size:.95rem; margin-top:5px; }
+  .header-title p { color:rgba(255,255,255,.7); font-size:.9rem; margin-top:5px; }
   .gold-bar { height:4px; background:linear-gradient(90deg,transparent,var(--gold),var(--gold-light),var(--gold),transparent); }
 
-  .container { max-width:900px; margin:0 auto; padding:24px 16px 40px; }
+  .container { max-width:960px; margin:0 auto; padding:20px 16px 40px; }
 
-  .nav-links { display:flex; gap:10px; justify-content:center; margin-bottom:24px; flex-wrap:wrap; }
+  .nav-links { display:flex; gap:10px; justify-content:center; margin-bottom:20px; flex-wrap:wrap; }
   .nav-links a { background:var(--navy); color:white; padding:8px 18px; border-radius:20px;
     text-decoration:none; font-size:.85rem; font-weight:600; transition:background .2s; }
   .nav-links a:hover, .nav-links a.active { background:var(--gold); color:var(--navy); }
 
-  /* FILTER TABS */
-  .filter-tabs { display:flex; gap:8px; justify-content:center; flex-wrap:wrap; margin-bottom:24px; }
-  .filter-tab { padding:7px 16px; border-radius:20px; border:2px solid var(--navy);
-    background:white; color:var(--navy); font-weight:600; font-size:.82rem;
-    cursor:pointer; transition:all .2s; }
-  .filter-tab:hover, .filter-tab.active { background:var(--navy); color:white; }
-  .filter-tab.nl-tab { border-color:var(--gold); color:var(--gold); }
-  .filter-tab.nl-tab:hover, .filter-tab.nl-tab.active { background:var(--gold); color:var(--navy); }
+  /* FILTER */
+  .filter-tabs { display:flex; gap:8px; justify-content:center; flex-wrap:wrap; margin-bottom:20px; }
+  .ftab { padding:7px 16px; border-radius:20px; border:2px solid var(--navy);
+    background:white; color:var(--navy); font-weight:600; font-size:.82rem; cursor:pointer; transition:all .2s; }
+  .ftab:hover, .ftab.active { background:var(--navy); color:white; }
+  .ftab.nl { border-color:var(--oranje); color:var(--oranje); }
+  .ftab.nl:hover, .ftab.nl.active { background:var(--oranje); color:white; }
 
-  /* PHASE SECTION */
-  .phase { margin-bottom:32px; }
-  .phase-header { background:var(--navy); border-radius:12px 12px 0 0;
-    padding:12px 20px; display:flex; align-items:center; gap:10px; }
-  .phase-header.ko { background:var(--gold); }
-  .phase-header h2 { font-family:'Bebas Neue',sans-serif; font-size:1.3rem;
-    letter-spacing:.08em; color:white; }
-  .phase-header.ko h2 { color:var(--navy); }
-  .phase-header .count { background:rgba(255,255,255,.2); color:white;
-    font-size:.75rem; font-weight:700; padding:3px 10px; border-radius:12px; margin-left:auto; }
-  .phase-header.ko .count { background:rgba(13,42,84,.2); color:var(--navy); }
+  /* FASE BLOK */
+  .fase { margin-bottom:28px; }
+  .fase-hdr { background:var(--navy); border-radius:12px 12px 0 0; padding:12px 18px;
+    display:flex; align-items:center; gap:10px; }
+  .fase-hdr.ko { background:var(--gold); }
+  .fase-hdr h2 { font-family:'Bebas Neue',sans-serif; font-size:1.2rem; letter-spacing:.08em; color:white; }
+  .fase-hdr.ko h2 { color:var(--navy); }
+  .fase-hdr .ronde-badge { margin-left:auto; background:rgba(255,255,255,.2); color:white;
+    font-size:.72rem; font-weight:700; padding:3px 10px; border-radius:12px; }
+  .fase-hdr.ko .ronde-badge { background:rgba(13,42,84,.2); color:var(--navy); }
 
-  .match-table { background:white; border-radius:0 0 12px 12px;
-    overflow:hidden; box-shadow:0 2px 14px rgba(13,42,84,.08); }
-  .match-row { display:grid; grid-template-columns:50px 80px 60px 1fr auto 1fr;
-    align-items:center; gap:8px; padding:10px 16px;
+  .wedstrijden { background:white; border-radius:0 0 12px 12px; box-shadow:0 2px 14px rgba(13,42,84,.08); overflow:hidden; }
+
+  /* RONDE HEADER binnen fase */
+  .ronde-hdr { background:#e8eef7; padding:7px 16px; font-size:.78rem; font-weight:700;
+    color:var(--navy); letter-spacing:.04em; text-transform:uppercase; }
+
+  /* WEDSTRIJD ROW */
+  .match { display:grid; grid-template-columns:90px 1fr auto 1fr 100px;
+    align-items:center; gap:8px; padding:9px 16px;
     border-bottom:1px solid var(--gray); transition:background .15s; }
-  .match-row:last-child { border-bottom:none; }
-  .match-row:hover { background:#f7f5f0; }
-  .match-row.nl-match { background:#fffbf0; border-left:3px solid var(--gold); }
-  .match-row.nl-match:hover { background:#fff5d6; }
+  .match:last-child { border-bottom:none; }
+  .match:hover { background:#f7f5f0; }
+  .match.nl { background:#fffbf0; border-left:3px solid var(--oranje); }
+  .match.nl:hover { background:#fff5d6; }
+  .match.hidden { display:none !important; }
 
-  .match-nr { font-size:.75rem; color:#aaa; font-weight:600; text-align:center; }
-  .match-datum { font-size:.78rem; color:#666; }
-  .match-groep { background:var(--navy); color:white; font-size:.7rem;
-    font-weight:700; padding:2px 8px; border-radius:8px; text-align:center; }
-  .match-groep.nl { background:var(--gold); color:var(--navy); }
-  .team { font-size:.9rem; font-weight:500; }
+  .match-datum { font-size:.75rem; color:#666; }
+  .match-datum strong { display:block; color:var(--navy); font-size:.8rem; }
+  .team { font-size:.88rem; font-weight:500; }
   .team.right { text-align:right; }
-  .team.nl { color:var(--gold); font-weight:700; }
-  .score-box { display:flex; align-items:center; gap:6px; justify-content:center; }
-  .score { background:var(--navy); color:white; width:28px; height:28px;
-    border-radius:6px; display:flex; align-items:center; justify-content:center;
-    font-weight:700; font-size:.9rem; }
-  .score.empty { background:#e8e4dc; color:#aaa; font-size:.7rem; }
-  .sep { font-weight:700; color:#aaa; }
+  .team.nl-team { color:var(--oranje); font-weight:700; }
+  .vs { font-weight:700; color:#ccc; font-size:.9rem; text-align:center; }
+  .stad { font-size:.72rem; color:#aaa; text-align:right; }
 
-  /* KO special rows */
-  .ko-match { grid-template-columns:50px 100px 1fr auto 1fr; }
-  .ko-ronde { font-size:.75rem; color:#666; font-weight:600; }
-
-  .hidden { display:none !important; }
+  .back-to-top { display:block; text-align:center; margin:24px auto 0; padding:10px 28px;
+    background:var(--navy); color:white; border-radius:24px; text-decoration:none;
+    font-weight:600; font-size:.88rem; width:fit-content; transition:background .2s; }
+  .back-to-top:hover { background:var(--gold); color:var(--navy); }
 
   footer { background:var(--navy); color:rgba(255,255,255,.5); text-align:center;
     padding:18px; font-size:.8rem; margin-top:20px; }
   footer strong { color:var(--gold); }
 
   @media(max-width:600px) {
-    .match-row { grid-template-columns:36px 64px 44px 1fr auto 1fr; gap:5px; padding:8px 10px; }
+    .match { grid-template-columns:70px 1fr auto 1fr; gap:5px; padding:8px 10px; }
+    .stad { display:none; }
     .team { font-size:.8rem; }
-    .score { width:24px; height:24px; font-size:.8rem; }
   }
-
-  /* BACK TO TOP */
-  .back-to-top {
-    display: block;
-    text-align: center;
-    margin: 24px auto 0;
-    padding: 10px 28px;
-    background: var(--navy);
-    color: white;
-    border-radius: 24px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: .88rem;
-    letter-spacing: .04em;
-    width: fit-content;
-    transition: background .2s;
-  }
-  .back-to-top:hover { background: var(--gold); color: var(--navy); }
 </style>
 </head>
 <body id="top">
@@ -141,13 +117,159 @@
   </div>
 
   <div class="filter-tabs">
-    <button class="filter-tab active" onclick="filter('all')">Alle wedstrijden</button>
-    <button class="filter-tab nl-tab" onclick="filter('nl')">🇳🇱 Alleen Nederland</button>
-    <button class="filter-tab" onclick="filter('groep')">Groepsfase</button>
-    <button class="filter-tab" onclick="filter('ko')">Knock-out</button>
+    <button class="ftab active" onclick="setFilter('all',this)">Alle wedstrijden</button>
+    <button class="ftab nl" onclick="setFilter('nl',this)">🇳🇱 Alleen Nederland</button>
+    <button class="ftab" onclick="setFilter('groep',this)">Groepsfase</button>
+    <button class="ftab" onclick="setFilter('ko',this)">Knock-out</button>
   </div>
 
-  <div id="schema-container"></div>
+  <div id="schema">
+
+    <!-- GROEPSFASE -->
+    <div class="fase" data-fase="groep">
+      <div class="fase-hdr">
+        <h2>⚽ Groepsfase</h2>
+        <span class="ronde-badge">72 wedstrijden · 11–28 juni 2026</span>
+      </div>
+      <div class="wedstrijden">
+
+        <div class="ronde-hdr">Speelronde 1</div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>11 jun</strong>21:00</span><span class="team right">Mexico</span><span class="vs">vs</span><span class="team">Zuid-Afrika</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>12 jun</strong>04:00</span><span class="team right">Zuid-Korea</span><span class="vs">vs</span><span class="team">Tsjechië</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>12 jun</strong>21:00</span><span class="team right">Canada</span><span class="vs">vs</span><span class="team">Bosnië Herzegovina</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>13 jun</strong>03:00</span><span class="team right">Verenigde Staten</span><span class="vs">vs</span><span class="team">Paraguay</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>13 jun</strong>21:00</span><span class="team right">Qatar</span><span class="vs">vs</span><span class="team">Zwitserland</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>14 jun</strong>00:00</span><span class="team right">Brazilië</span><span class="vs">vs</span><span class="team">Marokko</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>14 jun</strong>03:00</span><span class="team right">Haïti</span><span class="vs">vs</span><span class="team">Schotland</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>14 jun</strong>06:00</span><span class="team right">Australië</span><span class="vs">vs</span><span class="team">Turkije</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>14 jun</strong>19:00</span><span class="team right">Duitsland</span><span class="vs">vs</span><span class="team">Curaçao</span><span class="stad">–</span></div>
+        <div class="match nl" data-nl="true"><span class="match-datum"><strong>14 jun</strong>22:00</span><span class="team right nl-team">🇳🇱 Nederland</span><span class="vs">vs</span><span class="team">Japan</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>15 jun</strong>01:00</span><span class="team right">Ivoorkust</span><span class="vs">vs</span><span class="team">Ecuador</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>15 jun</strong>04:00</span><span class="team right">Zweden</span><span class="vs">vs</span><span class="team">Tunesië</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>15 jun</strong>18:00</span><span class="team right">Spanje</span><span class="vs">vs</span><span class="team">Kaapverdië</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>15 jun</strong>21:00</span><span class="team right">België</span><span class="vs">vs</span><span class="team">Egypte</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>16 jun</strong>00:00</span><span class="team right">Saoedi-Arabië</span><span class="vs">vs</span><span class="team">Uruguay</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>16 jun</strong>03:00</span><span class="team right">Iran</span><span class="vs">vs</span><span class="team">Nieuw-Zeeland</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>16 jun</strong>21:00</span><span class="team right">Frankrijk</span><span class="vs">vs</span><span class="team">Senegal</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>17 jun</strong>00:00</span><span class="team right">Irak</span><span class="vs">vs</span><span class="team">Noorwegen</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>17 jun</strong>03:00</span><span class="team right">Argentinië</span><span class="vs">vs</span><span class="team">Algerije</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>17 jun</strong>06:00</span><span class="team right">Oostenrijk</span><span class="vs">vs</span><span class="team">Jordanië</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>17 jun</strong>19:00</span><span class="team right">Portugal</span><span class="vs">vs</span><span class="team">Congo-Kinshasa</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>17 jun</strong>22:00</span><span class="team right">Engeland</span><span class="vs">vs</span><span class="team">Kroatië</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>18 jun</strong>01:00</span><span class="team right">Ghana</span><span class="vs">vs</span><span class="team">Panama</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>18 jun</strong>04:00</span><span class="team right">Oezbekistan</span><span class="vs">vs</span><span class="team">Colombia</span><span class="stad">–</span></div>
+
+        <div class="ronde-hdr">Speelronde 2</div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>18 jun</strong>18:00</span><span class="team right">Tsjechië</span><span class="vs">vs</span><span class="team">Zuid-Afrika</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>18 jun</strong>21:00</span><span class="team right">Zwitserland</span><span class="vs">vs</span><span class="team">Bosnië Herzegovina</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>19 jun</strong>00:00</span><span class="team right">Canada</span><span class="vs">vs</span><span class="team">Qatar</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>19 jun</strong>03:00</span><span class="team right">Mexico</span><span class="vs">vs</span><span class="team">Zuid-Korea</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>19 jun</strong>21:00</span><span class="team right">Verenigde Staten</span><span class="vs">vs</span><span class="team">Australië</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>20 jun</strong>00:00</span><span class="team right">Schotland</span><span class="vs">vs</span><span class="team">Marokko</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>20 jun</strong>02:30</span><span class="team right">Brazilië</span><span class="vs">vs</span><span class="team">Haïti</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>20 jun</strong>05:00</span><span class="team right">Turkije</span><span class="vs">vs</span><span class="team">Paraguay</span><span class="stad">–</span></div>
+        <div class="match nl" data-nl="true"><span class="match-datum"><strong>20 jun</strong>19:00</span><span class="team right nl-team">🇳🇱 Nederland</span><span class="vs">vs</span><span class="team">Zweden</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>20 jun</strong>22:00</span><span class="team right">Duitsland</span><span class="vs">vs</span><span class="team">Ivoorkust</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>21 jun</strong>02:00</span><span class="team right">Ecuador</span><span class="vs">vs</span><span class="team">Curaçao</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>21 jun</strong>06:00</span><span class="team right">Tunesië</span><span class="vs">vs</span><span class="team">Japan</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>21 jun</strong>18:00</span><span class="team right">Spanje</span><span class="vs">vs</span><span class="team">Saoedi-Arabië</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>21 jun</strong>21:00</span><span class="team right">België</span><span class="vs">vs</span><span class="team">Iran</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>22 jun</strong>00:00</span><span class="team right">Uruguay</span><span class="vs">vs</span><span class="team">Kaapverdië</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>22 jun</strong>03:00</span><span class="team right">Nieuw-Zeeland</span><span class="vs">vs</span><span class="team">Egypte</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>22 jun</strong>19:00</span><span class="team right">Argentinië</span><span class="vs">vs</span><span class="team">Oostenrijk</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>22 jun</strong>23:00</span><span class="team right">Frankrijk</span><span class="vs">vs</span><span class="team">Irak</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>23 jun</strong>02:00</span><span class="team right">Noorwegen</span><span class="vs">vs</span><span class="team">Senegal</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>23 jun</strong>05:00</span><span class="team right">Jordanië</span><span class="vs">vs</span><span class="team">Algerije</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>23 jun</strong>19:00</span><span class="team right">Portugal</span><span class="vs">vs</span><span class="team">Oezbekistan</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>23 jun</strong>22:00</span><span class="team right">Engeland</span><span class="vs">vs</span><span class="team">Ghana</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>24 jun</strong>01:00</span><span class="team right">Panama</span><span class="vs">vs</span><span class="team">Kroatië</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>24 jun</strong>04:00</span><span class="team right">Colombia</span><span class="vs">vs</span><span class="team">Congo-Kinshasa</span><span class="stad">–</span></div>
+
+        <div class="ronde-hdr">Speelronde 3</div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>24 jun</strong>21:00</span><span class="team right">Zwitserland</span><span class="vs">vs</span><span class="team">Canada</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>24 jun</strong>21:00</span><span class="team right">Bosnië Herzegovina</span><span class="vs">vs</span><span class="team">Qatar</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>25 jun</strong>00:00</span><span class="team right">Schotland</span><span class="vs">vs</span><span class="team">Brazilië</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>25 jun</strong>00:00</span><span class="team right">Marokko</span><span class="vs">vs</span><span class="team">Haïti</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>25 jun</strong>03:00</span><span class="team right">Zuid-Afrika</span><span class="vs">vs</span><span class="team">Zuid-Korea</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>25 jun</strong>03:00</span><span class="team right">Tsjechië</span><span class="vs">vs</span><span class="team">Mexico</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>25 jun</strong>22:00</span><span class="team right">Ecuador</span><span class="vs">vs</span><span class="team">Duitsland</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>25 jun</strong>22:00</span><span class="team right">Curaçao</span><span class="vs">vs</span><span class="team">Ivoorkust</span><span class="stad">–</span></div>
+        <div class="match nl" data-nl="true"><span class="match-datum"><strong>26 jun</strong>01:00</span><span class="team right nl-team">Tunesië</span><span class="vs">vs</span><span class="team nl-team">🇳🇱 Nederland</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>26 jun</strong>01:00</span><span class="team right">Japan</span><span class="vs">vs</span><span class="team">Zweden</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>26 jun</strong>04:00</span><span class="team right">Paraguay</span><span class="vs">vs</span><span class="team">Australië</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>26 jun</strong>04:00</span><span class="team right">Turkije</span><span class="vs">vs</span><span class="team">Verenigde Staten</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>26 jun</strong>21:00</span><span class="team right">Noorwegen</span><span class="vs">vs</span><span class="team">Frankrijk</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>26 jun</strong>21:00</span><span class="team right">Senegal</span><span class="vs">vs</span><span class="team">Irak</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>27 jun</strong>02:00</span><span class="team right">Uruguay</span><span class="vs">vs</span><span class="team">Spanje</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>27 jun</strong>02:00</span><span class="team right">Kaapverdië</span><span class="vs">vs</span><span class="team">Saoedi-Arabië</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>27 jun</strong>05:00</span><span class="team right">Nieuw-Zeeland</span><span class="vs">vs</span><span class="team">België</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>27 jun</strong>05:00</span><span class="team right">Egypte</span><span class="vs">vs</span><span class="team">Iran</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>27 jun</strong>23:00</span><span class="team right">Panama</span><span class="vs">vs</span><span class="team">Engeland</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>27 jun</strong>23:00</span><span class="team right">Kroatië</span><span class="vs">vs</span><span class="team">Ghana</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>28 jun</strong>01:30</span><span class="team right">Colombia</span><span class="vs">vs</span><span class="team">Portugal</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>28 jun</strong>01:30</span><span class="team right">Congo-Kinshasa</span><span class="vs">vs</span><span class="team">Oezbekistan</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>28 jun</strong>04:00</span><span class="team right">Jordanië</span><span class="vs">vs</span><span class="team">Argentinië</span><span class="stad">–</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>28 jun</strong>04:00</span><span class="team right">Algerije</span><span class="vs">vs</span><span class="team">Oostenrijk</span><span class="stad">–</span></div>
+
+      </div>
+    </div>
+
+    <!-- KNOCK-OUT -->
+    <div class="fase" data-fase="ko">
+      <div class="fase-hdr ko">
+        <h2>⚡ Knock-out fase</h2>
+        <span class="ronde-badge">32 wedstrijden · 28 jun – 19 jul 2026</span>
+      </div>
+      <div class="wedstrijden">
+
+        <div class="ronde-hdr">Zestiende finales (28 jun – 4 jul)</div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>28 jun</strong>21:00</span><span class="team right">#73 · 2A</span><span class="vs">vs</span><span class="team">2B</span><span class="stad">Los Angeles</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>29 jun</strong>19:00</span><span class="team right">#76 · 1C</span><span class="vs">vs</span><span class="team">2F</span><span class="stad">Houston</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>29 jun</strong>22:30</span><span class="team right">#74 · 1E</span><span class="vs">vs</span><span class="team">Beste nr.3</span><span class="stad">Boston</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>30 jun</strong>03:00</span><span class="team right">#75 · 1F</span><span class="vs">vs</span><span class="team">2C</span><span class="stad">Monterrey</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>30 jun</strong>19:00</span><span class="team right">#78 · 2E</span><span class="vs">vs</span><span class="team">2I</span><span class="stad">Dallas</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>30 jun</strong>23:00</span><span class="team right">#77 · 1I</span><span class="vs">vs</span><span class="team">Beste nr.3</span><span class="stad">New York</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>1 jul</strong>03:00</span><span class="team right">#79 · 1A</span><span class="vs">vs</span><span class="team">Beste nr.3</span><span class="stad">Mexico-Stad</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>1 jul</strong>18:00</span><span class="team right">#80 · 1L</span><span class="vs">vs</span><span class="team">Beste nr.3</span><span class="stad">Atlanta</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>1 jul</strong>22:00</span><span class="team right">#82 · 1G</span><span class="vs">vs</span><span class="team">Beste nr.3</span><span class="stad">Seattle</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>2 jul</strong>02:00</span><span class="team right">#81 · 1D</span><span class="vs">vs</span><span class="team">Beste nr.3</span><span class="stad">San Francisco</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>2 jul</strong>21:00</span><span class="team right">#84 · 1H</span><span class="vs">vs</span><span class="team">2J</span><span class="stad">Los Angeles</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>3 jul</strong>01:00</span><span class="team right">#83 · 2K</span><span class="vs">vs</span><span class="team">2L</span><span class="stad">Toronto</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>3 jul</strong>05:00</span><span class="team right">#85 · 1B</span><span class="vs">vs</span><span class="team">Beste nr.3</span><span class="stad">Vancouver</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>3 jul</strong>20:00</span><span class="team right">#88 · 2D</span><span class="vs">vs</span><span class="team">2G</span><span class="stad">Dallas</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>4 jul</strong>00:00</span><span class="team right">#86 · 1J</span><span class="vs">vs</span><span class="team">2H</span><span class="stad">Miami</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>4 jul</strong>03:30</span><span class="team right">#87 · 1K</span><span class="vs">vs</span><span class="team">Beste nr.3</span><span class="stad">Kansas City</span></div>
+
+        <div class="ronde-hdr">Achtste finales (4–7 jul)</div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>4 jul</strong>19:00</span><span class="team right">#89 · W73</span><span class="vs">vs</span><span class="team">W75</span><span class="stad">Houston</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>4 jul</strong>23:00</span><span class="team right">#90 · W74</span><span class="vs">vs</span><span class="team">W77</span><span class="stad">Philadelphia</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>5 jul</strong>22:00</span><span class="team right">#91 · W76</span><span class="vs">vs</span><span class="team">W78</span><span class="stad">New York</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>6 jul</strong>02:00</span><span class="team right">#92 · W79</span><span class="vs">vs</span><span class="team">W80</span><span class="stad">Mexico-Stad</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>6 jul</strong>21:00</span><span class="team right">#93 · W83</span><span class="vs">vs</span><span class="team">W84</span><span class="stad">Dallas</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>7 jul</strong>02:00</span><span class="team right">#94 · W81</span><span class="vs">vs</span><span class="team">W82</span><span class="stad">Seattle</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>7 jul</strong>18:00</span><span class="team right">#95 · W86</span><span class="vs">vs</span><span class="team">W88</span><span class="stad">Atlanta</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>7 jul</strong>22:00</span><span class="team right">#96 · W85</span><span class="vs">vs</span><span class="team">W87</span><span class="stad">Vancouver</span></div>
+
+        <div class="ronde-hdr">Kwartfinales (9–12 jul)</div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>9 jul</strong>22:00</span><span class="team right">#97 · W89</span><span class="vs">vs</span><span class="team">W90</span><span class="stad">Boston</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>10 jul</strong>21:00</span><span class="team right">#98 · W93</span><span class="vs">vs</span><span class="team">W94</span><span class="stad">Los Angeles</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>11 jul</strong>23:00</span><span class="team right">#99 · W91</span><span class="vs">vs</span><span class="team">W92</span><span class="stad">Miami</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>12 jul</strong>03:00</span><span class="team right">#100 · W95</span><span class="vs">vs</span><span class="team">W96</span><span class="stad">Kansas City</span></div>
+
+        <div class="ronde-hdr">Halve finales (14–15 jul)</div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>14 jul</strong>21:00</span><span class="team right">#101 · W97</span><span class="vs">vs</span><span class="team">W98</span><span class="stad">Dallas</span></div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>15 jul</strong>21:00</span><span class="team right">#102 · W99</span><span class="vs">vs</span><span class="team">W100</span><span class="stad">Atlanta</span></div>
+
+        <div class="ronde-hdr">Troostfinale – 3e plaats (18 jul)</div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>18 jul</strong>23:00</span><span class="team right">#103 · V101</span><span class="vs">vs</span><span class="team">V102</span><span class="stad">Miami</span></div>
+
+        <div class="ronde-hdr">🏆 Finale (19 jul)</div>
+        <div class="match" data-nl="false"><span class="match-datum"><strong>19 jul</strong>21:00</span><span class="team right">#104 · W101</span><span class="vs">vs</span><span class="team">W102</span><span class="stad">New York/NJ</span></div>
+
+      </div>
+    </div>
+
+  </div>
 
   <a href="#top" class="back-to-top">↑ Terug naar boven</a>
 
@@ -155,173 +277,26 @@
 
 <footer>
   <strong>WK Poule 2026 – Langs de Ley, Den Haag</strong><br>
-  Alle tijden zijn lokale speeltijden · Uitslagen worden ingevuld na afloop
+  Alle tijden zijn Nederlandse tijd
 </footer>
 
+<div style="position:fixed;bottom:8px;right:12px;font-size:.7rem;
+  color:rgba(255,255,255,.4);background:rgba(0,0,0,.3);
+  padding:2px 8px;border-radius:10px;pointer-events:none;">
+  v1.1 – mei 2026
+</div>
+
 <script>
-const groepsfase = [
-  // Groep A
-  {nr:1,  datum:"11 jun", groep:"A", thuis:"Mexico",             uit:"South Africa",       nl:false},
-  {nr:2,  datum:"11 jun", groep:"A", thuis:"South Korea",        uit:"Tsjechië",            nl:false},
-  {nr:3,  datum:"18 jun", groep:"A", thuis:"Tsjechië",           uit:"South Africa",        nl:false},
-  {nr:4,  datum:"18 jun", groep:"A", thuis:"Mexico",             uit:"South Korea",         nl:false},
-  {nr:5,  datum:"24 jun", groep:"A", thuis:"Tsjechië",           uit:"Mexico",              nl:false},
-  {nr:6,  datum:"24 jun", groep:"A", thuis:"South Africa",       uit:"South Korea",         nl:false},
-  // Groep B
-  {nr:7,  datum:"12 jun", groep:"B", thuis:"Canada",             uit:"Bosnië-Herzegovina",  nl:false},
-  {nr:8,  datum:"13 jun", groep:"B", thuis:"Qatar",              uit:"Switzerland",         nl:false},
-  {nr:9,  datum:"18 jun", groep:"B", thuis:"Switzerland",        uit:"Bosnië-Herzegovina",  nl:false},
-  {nr:10, datum:"18 jun", groep:"B", thuis:"Canada",             uit:"Qatar",               nl:false},
-  {nr:11, datum:"24 jun", groep:"B", thuis:"Switzerland",        uit:"Canada",              nl:false},
-  {nr:12, datum:"24 jun", groep:"B", thuis:"Bosnië-Herzegovina", uit:"Qatar",               nl:false},
-  // Groep C
-  {nr:13, datum:"13 jun", groep:"C", thuis:"Brazil",             uit:"Morocco",             nl:false},
-  {nr:14, datum:"13 jun", groep:"C", thuis:"Haiti",              uit:"Scotland",            nl:false},
-  {nr:15, datum:"19 jun", groep:"C", thuis:"Scotland",           uit:"Morocco",             nl:false},
-  {nr:16, datum:"19 jun", groep:"C", thuis:"Brazil",             uit:"Haiti",               nl:false},
-  {nr:17, datum:"24 jun", groep:"C", thuis:"Scotland",           uit:"Brazil",              nl:false},
-  {nr:18, datum:"24 jun", groep:"C", thuis:"Morocco",            uit:"Haiti",               nl:false},
-  // Groep D
-  {nr:19, datum:"12 jun", groep:"D", thuis:"USA",                uit:"Paraguay",            nl:false},
-  {nr:20, datum:"13 jun", groep:"D", thuis:"Australia",          uit:"Turkije",             nl:false},
-  {nr:21, datum:"19 jun", groep:"D", thuis:"USA",                uit:"Australia",           nl:false},
-  {nr:22, datum:"19 jun", groep:"D", thuis:"Turkije",            uit:"Paraguay",            nl:false},
-  {nr:23, datum:"25 jun", groep:"D", thuis:"Turkije",            uit:"USA",                 nl:false},
-  {nr:24, datum:"25 jun", groep:"D", thuis:"Paraguay",           uit:"Australia",           nl:false},
-  // Groep E
-  {nr:25, datum:"14 jun", groep:"E", thuis:"Germany",            uit:"Curaçao",             nl:false},
-  {nr:26, datum:"14 jun", groep:"E", thuis:"Ivory Coast",        uit:"Ecuador",             nl:false},
-  {nr:27, datum:"20 jun", groep:"E", thuis:"Germany",            uit:"Ivory Coast",         nl:false},
-  {nr:28, datum:"20 jun", groep:"E", thuis:"Ecuador",            uit:"Curaçao",             nl:false},
-  {nr:29, datum:"25 jun", groep:"E", thuis:"Ecuador",            uit:"Germany",             nl:false},
-  {nr:30, datum:"25 jun", groep:"E", thuis:"Curaçao",            uit:"Ivory Coast",         nl:false},
-  // Groep F (NL)
-  {nr:31, datum:"14 jun", groep:"F", thuis:"Nederland",          uit:"Japan",               nl:true},
-  {nr:32, datum:"14 jun", groep:"F", thuis:"Zweden",             uit:"Tunisia",             nl:false},
-  {nr:33, datum:"20 jun", groep:"F", thuis:"Nederland",          uit:"Zweden",              nl:true},
-  {nr:34, datum:"20 jun", groep:"F", thuis:"Tunisia",            uit:"Japan",               nl:false},
-  {nr:35, datum:"25 jun", groep:"F", thuis:"Japan",              uit:"Zweden",              nl:false},
-  {nr:36, datum:"25 jun", groep:"F", thuis:"Tunisia",            uit:"Nederland",           nl:true},
-  // Groep G
-  {nr:37, datum:"15 jun", groep:"G", thuis:"Belgium",            uit:"Egypt",               nl:false},
-  {nr:38, datum:"15 jun", groep:"G", thuis:"Iran",               uit:"New Zealand",         nl:false},
-  {nr:39, datum:"21 jun", groep:"G", thuis:"Belgium",            uit:"Iran",                nl:false},
-  {nr:40, datum:"21 jun", groep:"G", thuis:"New Zealand",        uit:"Egypt",               nl:false},
-  {nr:41, datum:"26 jun", groep:"G", thuis:"Egypt",              uit:"Iran",                nl:false},
-  {nr:42, datum:"26 jun", groep:"G", thuis:"New Zealand",        uit:"Belgium",             nl:false},
-  // Groep H
-  {nr:43, datum:"15 jun", groep:"H", thuis:"Spain",              uit:"Cape Verde",          nl:false},
-  {nr:44, datum:"15 jun", groep:"H", thuis:"Saudi Arabia",       uit:"Uruguay",             nl:false},
-  {nr:45, datum:"21 jun", groep:"H", thuis:"Spain",              uit:"Saudi Arabia",        nl:false},
-  {nr:46, datum:"21 jun", groep:"H", thuis:"Uruguay",            uit:"Cape Verde",          nl:false},
-  {nr:47, datum:"26 jun", groep:"H", thuis:"Cape Verde",         uit:"Saudi Arabia",        nl:false},
-  {nr:48, datum:"26 jun", groep:"H", thuis:"Uruguay",            uit:"Spain",               nl:false},
-  // Groep I
-  {nr:49, datum:"16 jun", groep:"I", thuis:"France",             uit:"Senegal",             nl:false},
-  {nr:50, datum:"16 jun", groep:"I", thuis:"Irak",               uit:"Norway",              nl:false},
-  {nr:51, datum:"22 jun", groep:"I", thuis:"France",             uit:"Irak",                nl:false},
-  {nr:52, datum:"22 jun", groep:"I", thuis:"Norway",             uit:"Senegal",             nl:false},
-  {nr:53, datum:"26 jun", groep:"I", thuis:"Norway",             uit:"France",              nl:false},
-  {nr:54, datum:"26 jun", groep:"I", thuis:"Senegal",            uit:"Irak",                nl:false},
-  // Groep J
-  {nr:55, datum:"16 jun", groep:"J", thuis:"Argentina",          uit:"Algeria",             nl:false},
-  {nr:56, datum:"16 jun", groep:"J", thuis:"Austria",            uit:"Jordan",              nl:false},
-  {nr:57, datum:"22 jun", groep:"J", thuis:"Argentina",          uit:"Austria",             nl:false},
-  {nr:58, datum:"22 jun", groep:"J", thuis:"Jordan",             uit:"Algeria",             nl:false},
-  {nr:59, datum:"27 jun", groep:"J", thuis:"Algeria",            uit:"Austria",             nl:false},
-  {nr:60, datum:"27 jun", groep:"J", thuis:"Jordan",             uit:"Argentina",           nl:false},
-  // Groep K
-  {nr:61, datum:"17 jun", groep:"K", thuis:"Portugal",           uit:"DR Congo",            nl:false},
-  {nr:62, datum:"17 jun", groep:"K", thuis:"Uzbekistan",         uit:"Colombia",            nl:false},
-  {nr:63, datum:"23 jun", groep:"K", thuis:"Portugal",           uit:"Uzbekistan",          nl:false},
-  {nr:64, datum:"23 jun", groep:"K", thuis:"Colombia",           uit:"DR Congo",            nl:false},
-  {nr:65, datum:"27 jun", groep:"K", thuis:"Colombia",           uit:"Portugal",            nl:false},
-  {nr:66, datum:"27 jun", groep:"K", thuis:"DR Congo",           uit:"Uzbekistan",          nl:false},
-  // Groep L
-  {nr:67, datum:"17 jun", groep:"L", thuis:"England",            uit:"Croatia",             nl:false},
-  {nr:68, datum:"17 jun", groep:"L", thuis:"Ghana",              uit:"Panama",              nl:false},
-  {nr:69, datum:"23 jun", groep:"L", thuis:"England",            uit:"Ghana",               nl:false},
-  {nr:70, datum:"23 jun", groep:"L", thuis:"Panama",             uit:"Croatia",             nl:false},
-  {nr:71, datum:"27 jun", groep:"L", thuis:"Panama",             uit:"England",             nl:false},
-  {nr:72, datum:"27 jun", groep:"L", thuis:"Croatia",            uit:"Ghana",               nl:false},
-];
-
-const knockout = [
-  { fase:"Ronde van 32",  nrs:"73–88",  datum:"1–4 jul",  info:"16 wedstrijden – winnaars & beste nummers 3" },
-  { fase:"Achtste finales", nrs:"89–96", datum:"8–10 jul", info:"8 wedstrijden" },
-  { fase:"Kwartfinales",  nrs:"97–100", datum:"14–15 jul", info:"4 wedstrijden" },
-  { fase:"Halve finales", nrs:"101–102",datum:"18–19 jul", info:"2 wedstrijden" },
-  { fase:"Troostfinale",  nrs:"103",    datum:"22 jul",    info:"3e en 4e plaats" },
-  { fase:"🏆 Finale",     nrs:"104",    datum:"23 jul",    info:"Wereldkampioen 2026" },
-];
-
-function matchRow(m) {
-  const nlMatch = m.nl;
-  const thuisNL = m.thuis === "Nederland";
-  const uitNL   = m.uit   === "Nederland";
-  return `<div class="match-row ${nlMatch?'nl-match':''}" data-nl="${nlMatch}" data-phase="groep">
-    <span class="match-nr">#${m.nr}</span>
-    <span class="match-datum">${m.datum}</span>
-    <span class="match-groep ${m.groep==='F'?'nl':''}">Groep ${m.groep}</span>
-    <span class="team ${thuisNL?'nl':''}">${m.thuis}</span>
-    <div class="score-box">
-      <span class="score empty">–</span>
-      <span class="sep">:</span>
-      <span class="score empty">–</span>
-    </div>
-    <span class="team right ${uitNL?'nl':''}">${m.uit}</span>
-  </div>`;
-}
-
-function koRow(k) {
-  return `<div class="match-row ko-match" data-nl="false" data-phase="ko">
-    <span class="match-nr" style="color:var(--gold);font-weight:700">${k.nrs}</span>
-    <span class="ko-ronde">${k.datum}</span>
-    <span class="team" style="grid-column:3/5;color:#555;font-size:.85rem">${k.fase} — ${k.info}</span>
-    <span class="team right" style="color:#aaa;font-size:.8rem">Afhankelijk van groepsfase</span>
-  </div>`;
-}
-
-const container = document.getElementById("schema-container");
-
-// Group stage
-const groepHTML = `
-  <div class="phase" id="phase-groep">
-    <div class="phase-header">
-      <h2>⚽ Groepsfase</h2>
-      <span class="count">72 wedstrijden · 11–27 juni 2026</span>
-    </div>
-    <div class="match-table">
-      ${groepsfase.map(matchRow).join("")}
-    </div>
-  </div>`;
-
-// Knock-out
-const koHTML = `
-  <div class="phase" id="phase-ko">
-    <div class="phase-header ko">
-      <h2>⚡ Knock-out fase</h2>
-      <span class="count">32 wedstrijden · 1–23 juli 2026</span>
-    </div>
-    <div class="match-table">
-      ${knockout.map(koRow).join("")}
-    </div>
-  </div>`;
-
-container.innerHTML = groepHTML + koHTML;
-
-function filter(type) {
-  document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
-  event.target.classList.add('active');
-
-  document.querySelectorAll('.match-row').forEach(row => {
-    const isNL    = row.dataset.nl === "true";
-    const isGroep = row.dataset.phase === "groep";
-    const isKO    = row.dataset.phase === "ko";
-    if (type === 'all')   row.classList.remove('hidden');
-    else if (type === 'nl')   row.classList.toggle('hidden', !isNL);
-    else if (type === 'groep') row.classList.toggle('hidden', !isGroep);
-    else if (type === 'ko')   row.classList.toggle('hidden', !isKO);
+function setFilter(type, btn) {
+  document.querySelectorAll('.ftab').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.match').forEach(m => {
+    const isNL = m.dataset.nl === 'true';
+    const fase = m.closest('.fase')?.dataset.fase;
+    if (type === 'all') m.classList.remove('hidden');
+    else if (type === 'nl') m.classList.toggle('hidden', !isNL);
+    else if (type === 'groep') m.classList.toggle('hidden', fase !== 'groep');
+    else if (type === 'ko') m.classList.toggle('hidden', fase !== 'ko');
   });
 }
 </script>
