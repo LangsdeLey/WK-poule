@@ -1515,6 +1515,11 @@
   <strong>WK Poule 2026 – Langs de Ley, Den Haag</strong><br>
   Puntentelling volgt nog · Vragen? Spreek de organisatie aan
 </footer>
+<div style="position:fixed;bottom:8px;right:12px;font-size:.7rem;
+  color:rgba(255,255,255,.4);background:rgba(0,0,0,.3);
+  padding:2px 8px;border-radius:10px;pointer-events:none;">
+  v1.0 – mei 2026
+</div>
 
 <script>
 function bouwExcelWaarden(data) {
@@ -1634,7 +1639,7 @@ function handleSubmit(e) {
   const bodyEncoded = encodeURIComponent(body);
 
   // Open mail-client van de gebruiker
-  window.location.href = `mailto:midimaster@live.nl?subject=${subject}&body=${bodyEncoded}`;
+  window.location.href = `mailto:langsdeley@plusjack.nl?subject=${subject}&body=${bodyEncoded}`;
 
   // Toon succesbericht
   document.getElementById('success-msg').style.display = 'block';
