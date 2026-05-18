@@ -490,6 +490,7 @@
   <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">
     <a href="index.html" style="background:var(--gold);color:var(--navy);padding:8px 18px;border-radius:20px;text-decoration:none;font-size:.85rem;font-weight:700;letter-spacing:.03em;">⚽ Poule invullen</a>
     <a href="scorebord.html" style="background:var(--navy);color:white;padding:8px 18px;border-radius:20px;text-decoration:none;font-size:.85rem;font-weight:600;letter-spacing:.03em;">🏆 Scorebord</a>
+    <a href="uitslagen.html" style="background:var(--navy);color:white;padding:8px 18px;border-radius:20px;text-decoration:none;font-size:.85rem;font-weight:600;letter-spacing:.03em;">📋 Uitslagen</a>
     <a href="tiplijst.html" style="background:var(--navy);color:white;padding:8px 18px;border-radius:20px;text-decoration:none;font-size:.85rem;font-weight:600;letter-spacing:.03em;">📊 Tiplijst groepsfase</a>
     <a href="speelschema.html" style="background:var(--navy);color:white;padding:8px 18px;border-radius:20px;text-decoration:none;font-size:.85rem;font-weight:600;letter-spacing:.03em;">📅 Speelschema</a>
   </div>
@@ -1518,7 +1519,7 @@
 <div style="position:fixed;bottom:8px;right:12px;font-size:.7rem;
   color:rgba(255,255,255,.4);background:rgba(0,0,0,.3);
   padding:2px 8px;border-radius:10px;pointer-events:none;">
-  v1.1 – mei 2026
+  v1.3 – mei 2026
 </div>
 
 <script>
@@ -1633,7 +1634,7 @@ function handleSubmit(e) {
   const fd = new FormData(e.target);
   const data = Object.fromEntries(fd.entries());
 
-  const body = bouwTekst(data);
+  const body = bouwExcelWaarden(data);
 
   const subject = encodeURIComponent('WK Poule 2026 – Voorspelling van ' + data.naam);
   const bodyEncoded = encodeURIComponent(body);
