@@ -107,23 +107,41 @@
 
 <div class="container">
 
-    <div class="nav-links">
-    <a href="index.html">📊 Puntentelling</a>
-    <a href="scorebord.html" >🏆 Scorebord</a>
-    <a href="uitslagen.html">📋 Uitslagen</a>
-    <a href="tiplijst.html" class='active'>📊 Tiplijst groepsfase</a>
-    <a href="speelschema.html">📅 Speelschema</a>
+  <div style="text-align:center;padding:60px 20px 40px;">
+
+    <!-- Voetbal animatie -->
+    <div style="font-size:5rem;margin-bottom:16px;animation:spin 3s linear infinite;display:inline-block;">⚽</div>
+
+    <h2 style="font-family:'Bebas Neue',sans-serif;font-size:2.8rem;
+      letter-spacing:.08em;color:var(--gold-light);margin-bottom:12px;">
+      Het WK is begonnen!
+    </h2>
+
+    <p style="color:white;font-size:1.15rem;font-weight:600;margin-bottom:8px;">
+      Alle voorspellingen zijn binnen.
+    </p>
+
+    <p style="color:rgba(255,255,255,.75);font-size:1rem;line-height:1.7;
+      max-width:500px;margin:0 auto 32px;">
+      De tiplijst is daarmee zijn functie voorbij — de strijd is nu op het veld!
+      Volg de stand via het scorebord en duim voor Oranje. 🇳🇱
+    </p>
+
+    <div class="nav-links" style="margin-bottom:40px;">
+      <a href="scorebord.html">🏆 Scorebord</a>
+      <a href="uitslagen.html">📋 Uitslagen</a>
+    </div>
+
+
+
   </div>
 
-  <div class="intro">
-    <p>⚠️ <strong style="color:var(--gold-light)">Alleen groepsfase</strong> — Dit zijn de verwachte uitslagen (tips) voor alle 72 wedstrijden in de groepsfase van het WK 2026. De knock-outfase is niet opgenomen, omdat die afhankelijk is van de groepsresultaten. De tips zijn gebaseerd op kansen en voorspellingen van voetbalexperts. Wie het meest accuraat tipped, wint de poule! 🏆</p>
-  </div>
+  <style>
+    @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    body { background: var(--navy); }
+  </style>
 
-  <div class="groups" id="groups-container">
-    <!-- Ingevuld door JavaScript -->
-  </div>
-
-  <a href="#top" class="back-to-top">↑ Terug naar boven</a>
+    <a href="#top" class="back-to-top">↑ Terug naar boven</a>
 
 </div>
 
@@ -132,176 +150,6 @@
   Tips gebaseerd op expertvoorspellingen
 </footer>
 
-<script>
-// ============================================================
-// TIPLIJST DATA – alle 72 groepswedstrijden
-// Formaat per wedstrijd: { datum, thuis, uit, tip, nl }
-// nl:true = Nederland speelt mee (goud gemarkeerd)
-// ============================================================
-const groups = {
-  "A": {
-    teams: "Mexico · South Africa · South Korea · Tsjechië",
-    matches: [
-      { datum:"11 jun", thuis:"Mexico",       uit:"South Africa", tip:"1-0" },
-      { datum:"11 jun", thuis:"South Korea",  uit:"Tsjechië",     tip:"1-1" },
-      { datum:"18 jun", thuis:"Tsjechië",     uit:"South Africa", tip:"1-1" },
-      { datum:"18 jun", thuis:"Mexico",       uit:"South Korea",  tip:"1-1" },
-      { datum:"24 jun", thuis:"Tsjechië",     uit:"Mexico",       tip:"0-1" },
-      { datum:"24 jun", thuis:"South Africa", uit:"South Korea",  tip:"1-1" },
-    ]
-  },
-  "B": {
-    teams: "Canada · Qatar · Switzerland · Bosnië-Herzegovina",
-    matches: [
-      { datum:"12 jun", thuis:"Canada",             uit:"Bosnië-Herzegovina", tip:"1-1" },
-      { datum:"13 jun", thuis:"Qatar",              uit:"Switzerland",         tip:"0-2" },
-      { datum:"18 jun", thuis:"Switzerland",        uit:"Bosnië-Herzegovina", tip:"1-0" },
-      { datum:"18 jun", thuis:"Canada",             uit:"Qatar",              tip:"1-0" },
-      { datum:"24 jun", thuis:"Switzerland",        uit:"Canada",             tip:"1-0" },
-      { datum:"24 jun", thuis:"Bosnië-Herzegovina", uit:"Qatar",              tip:"1-1" },
-    ]
-  },
-  "C": {
-    teams: "Brazil · Morocco · Haiti · Scotland",
-    matches: [
-      { datum:"13 jun", thuis:"Brazil",   uit:"Morocco",  tip:"1-0" },
-      { datum:"13 jun", thuis:"Haiti",    uit:"Scotland", tip:"0-1" },
-      { datum:"19 jun", thuis:"Scotland", uit:"Morocco",  tip:"1-1" },
-      { datum:"19 jun", thuis:"Brazil",   uit:"Haiti",    tip:"3-0" },
-      { datum:"24 jun", thuis:"Scotland", uit:"Brazil",   tip:"0-1" },
-      { datum:"24 jun", thuis:"Morocco",  uit:"Haiti",    tip:"2-0" },
-    ]
-  },
-  "D": {
-    teams: "USA · Paraguay · Australia · Turkije",
-    matches: [
-      { datum:"12 jun", thuis:"USA",       uit:"Paraguay",  tip:"1-1" },
-      { datum:"13 jun", thuis:"Australia", uit:"Turkije",   tip:"1-1" },
-      { datum:"19 jun", thuis:"USA",       uit:"Australia", tip:"1-0" },
-      { datum:"19 jun", thuis:"Turkije",   uit:"Paraguay",  tip:"1-1" },
-      { datum:"25 jun", thuis:"Turkije",   uit:"USA",       tip:"0-1" },
-      { datum:"25 jun", thuis:"Paraguay",  uit:"Australia", tip:"1-0" },
-    ]
-  },
-  "E": {
-    teams: "Germany · Curaçao · Ivory Coast · Ecuador",
-    matches: [
-      { datum:"14 jun", thuis:"Germany",     uit:"Curaçao",     tip:"3-0" },
-      { datum:"14 jun", thuis:"Ivory Coast", uit:"Ecuador",     tip:"0-1" },
-      { datum:"20 jun", thuis:"Germany",     uit:"Ivory Coast", tip:"1-0" },
-      { datum:"20 jun", thuis:"Ecuador",     uit:"Curaçao",     tip:"2-0" },
-      { datum:"25 jun", thuis:"Ecuador",     uit:"Germany",     tip:"0-1" },
-      { datum:"25 jun", thuis:"Curaçao",     uit:"Ivory Coast", tip:"0-1" },
-    ]
-  },
-  "F": {
-    teams: "🇳🇱 Nederland · Japan · Zweden · Tunesië",
-    nl: true,
-    matches: [
-      { datum:"14 jun", thuis:"Nederland", uit:"Japan",     tip:"1-1", nl:true },
-      { datum:"14 jun", thuis:"Zweden",    uit:"Tunisia",   tip:"1-1" },
-      { datum:"20 jun", thuis:"Nederland", uit:"Zweden",    tip:"2-0", nl:true },
-      { datum:"20 jun", thuis:"Tunisia",   uit:"Japan",     tip:"0-1" },
-      { datum:"25 jun", thuis:"Japan",     uit:"Zweden",    tip:"1-0" },
-      { datum:"25 jun", thuis:"Tunisia",   uit:"Nederland", tip:"0-2", nl:true },
-    ]
-  },
-  "G": {
-    teams: "Belgium · Egypt · Iran · New Zealand",
-    matches: [
-      { datum:"15 jun", thuis:"Belgium",     uit:"Egypt",       tip:"1-0" },
-      { datum:"15 jun", thuis:"Iran",        uit:"New Zealand", tip:"1-0" },
-      { datum:"21 jun", thuis:"Belgium",     uit:"Iran",        tip:"2-0" },
-      { datum:"21 jun", thuis:"New Zealand", uit:"Egypt",       tip:"0-1" },
-      { datum:"26 jun", thuis:"Egypt",       uit:"Iran",        tip:"1-1" },
-      { datum:"26 jun", thuis:"New Zealand", uit:"Belgium",     tip:"0-2" },
-    ]
-  },
-  "H": {
-    teams: "Spain · Cape Verde · Saudi Arabia · Uruguay",
-    matches: [
-      { datum:"15 jun", thuis:"Spain",        uit:"Cape Verde",   tip:"2-0" },
-      { datum:"15 jun", thuis:"Saudi Arabia", uit:"Uruguay",      tip:"0-1" },
-      { datum:"21 jun", thuis:"Spain",        uit:"Saudi Arabia", tip:"2-0" },
-      { datum:"21 jun", thuis:"Uruguay",      uit:"Cape Verde",   tip:"1-0" },
-      { datum:"26 jun", thuis:"Cape Verde",   uit:"Saudi Arabia", tip:"1-1" },
-      { datum:"26 jun", thuis:"Uruguay",      uit:"Spain",        tip:"0-2" },
-    ]
-  },
-  "I": {
-    teams: "France · Senegal · Irak · Norway",
-    matches: [
-      { datum:"16 jun", thuis:"France",  uit:"Senegal", tip:"1-0" },
-      { datum:"16 jun", thuis:"Irak",    uit:"Norway",  tip:"0-2" },
-      { datum:"22 jun", thuis:"France",  uit:"Irak",    tip:"2-0" },
-      { datum:"22 jun", thuis:"Norway",  uit:"Senegal", tip:"1-1" },
-      { datum:"26 jun", thuis:"Norway",  uit:"France",  tip:"0-1" },
-      { datum:"26 jun", thuis:"Senegal", uit:"Irak",    tip:"1-0" },
-    ]
-  },
-  "J": {
-    teams: "Argentina · Algeria · Austria · Jordan",
-    matches: [
-      { datum:"16 jun", thuis:"Argentina", uit:"Algeria",   tip:"1-0" },
-      { datum:"16 jun", thuis:"Austria",   uit:"Jordan",    tip:"1-0" },
-      { datum:"22 jun", thuis:"Argentina", uit:"Austria",   tip:"1-0" },
-      { datum:"22 jun", thuis:"Jordan",    uit:"Algeria",   tip:"0-1" },
-      { datum:"27 jun", thuis:"Algeria",   uit:"Austria",   tip:"0-1" },
-      { datum:"27 jun", thuis:"Jordan",    uit:"Argentina", tip:"0-2" },
-    ]
-  },
-  "K": {
-    teams: "Portugal · DR Congo · Uzbekistan · Colombia",
-    matches: [
-      { datum:"17 jun", thuis:"Portugal",   uit:"DR Congo",   tip:"2-0" },
-      { datum:"17 jun", thuis:"Uzbekistan", uit:"Colombia",   tip:"0-1" },
-      { datum:"23 jun", thuis:"Portugal",   uit:"Uzbekistan", tip:"2-0" },
-      { datum:"23 jun", thuis:"Colombia",   uit:"DR Congo",   tip:"1-0" },
-      { datum:"27 jun", thuis:"Colombia",   uit:"Portugal",   tip:"1-1" },
-      { datum:"27 jun", thuis:"DR Congo",   uit:"Uzbekistan", tip:"1-1" },
-    ]
-  },
-  "L": {
-    teams: "England · Croatia · Ghana · Panama",
-    matches: [
-      { datum:"17 jun", thuis:"England", uit:"Croatia", tip:"1-0" },
-      { datum:"17 jun", thuis:"Ghana",   uit:"Panama",  tip:"1-0" },
-      { datum:"23 jun", thuis:"England", uit:"Ghana",   tip:"1-0" },
-      { datum:"23 jun", thuis:"Panama",  uit:"Croatia", tip:"0-1" },
-      { datum:"27 jun", thuis:"Panama",  uit:"England", tip:"0-2" },
-      { datum:"27 jun", thuis:"Croatia", uit:"Ghana",   tip:"1-0" },
-    ]
-  }
-};
 
-const container = document.getElementById("groups-container");
-
-Object.entries(groups).forEach(([grpLetter, grp]) => {
-  const isNL = grp.nl === true;
-  const card = document.createElement("div");
-  card.className = "group-card";
-
-  const matchRows = grp.matches.map(m => {
-    const isNLMatch = m.nl === true;
-    const thuisNL = m.thuis === "Nederland" || m.thuis === "Netherlands";
-    const uitNL   = m.uit   === "Nederland" || m.uit   === "Netherlands";
-    return `
-      <div class="match-item">
-        <span class="team ${thuisNL?'nl':''}">${m.thuis}</span>
-        <span class="tip-score ${isNLMatch?'nl-match':''}">${m.tip}</span>
-        <span class="team right ${uitNL?'nl':''}">${m.uit}</span>
-        <span class="match-date">${m.datum}</span>
-      </div>`;
-  }).join("");
-
-  card.innerHTML = `
-    <div class="group-header ${isNL?'nl':''}">
-      <h2>Groep ${grpLetter}</h2>
-      <span class="badge">${grp.teams.split('·').length} teams</span>
-    </div>
-    <div class="match-list">${matchRows}</div>`;
-  container.appendChild(card);
-});
-</script>
 </body>
 </html>

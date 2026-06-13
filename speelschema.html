@@ -108,20 +108,22 @@
 
 <div class="container">
 
-  <div class="nav-links">
-    <a href="index.html">📊 Puntentelling</a>
-    <a href="scorebord.html">🏆 Scorebord</a>
+   <div class="nav-links">
+    <a href="index.html">⚽ Poule invullen</a>
+    <a href="scorebord.html" >🏆 Scorebord</a>
+    <a href="uitslagen.html" >📋 Uitslagen</a>
     <a href="tiplijst.html">📊 Tiplijst groepsfase</a>
-    <a href="speelschema.html" class="active">📅 Speelschema</a>
+    <a href="speelschema.html" class='active'>📅 Speelschema</a>
+    <a href="https://langsdeley.github.io/WK-poule" target="_blank">🏠 Langs de Ley</a>
   </div>
-
+  
   <div class="filter-tabs">
     <button class="ftab active" onclick="setFilter('all',this)">Alle wedstrijden</button>
     <button class="ftab nl" onclick="setFilter('nl',this)">🇳🇱 Alleen Nederland</button>
     <button class="ftab" onclick="setFilter('groep',this)">Groepsfase</button>
     <button class="ftab" onclick="setFilter('ko',this)">Knock-out</button>
   </div>
-
+    
   <div id="schema">
 
     <!-- GROEPSFASE -->
@@ -133,82 +135,82 @@
       <div class="wedstrijden">
 
         <div class="ronde-hdr">Speelronde 1</div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>11 jun</strong>21:00</span><span class="team right">Mexico</span><span class="vs">vs</span><span class="team">Zuid-Afrika</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>12 jun</strong>04:00</span><span class="team right">Zuid-Korea</span><span class="vs">vs</span><span class="team">Tsjechië</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>12 jun</strong>21:00</span><span class="team right">Canada</span><span class="vs">vs</span><span class="team">Bosnië Herzegovina</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>13 jun</strong>03:00</span><span class="team right">Verenigde Staten</span><span class="vs">vs</span><span class="team">Paraguay</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>13 jun</strong>21:00</span><span class="team right">Qatar</span><span class="vs">vs</span><span class="team">Zwitserland</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>14 jun</strong>00:00</span><span class="team right">Brazilië</span><span class="vs">vs</span><span class="team">Marokko</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>14 jun</strong>03:00</span><span class="team right">Haïti</span><span class="vs">vs</span><span class="team">Schotland</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>14 jun</strong>06:00</span><span class="team right">Australië</span><span class="vs">vs</span><span class="team">Turkije</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>14 jun</strong>19:00</span><span class="team right">Duitsland</span><span class="vs">vs</span><span class="team">Curaçao</span><span class="stad">–</span></div>
-        <div class="match nl" data-nl="true"><span class="match-datum"><strong>14 jun</strong>22:00</span><span class="team right nl-team">🇳🇱 Nederland</span><span class="vs">vs</span><span class="team">Japan</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>15 jun</strong>01:00</span><span class="team right">Ivoorkust</span><span class="vs">vs</span><span class="team">Ecuador</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>15 jun</strong>04:00</span><span class="team right">Zweden</span><span class="vs">vs</span><span class="team">Tunesië</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>15 jun</strong>18:00</span><span class="team right">Spanje</span><span class="vs">vs</span><span class="team">Kaapverdië</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>15 jun</strong>21:00</span><span class="team right">België</span><span class="vs">vs</span><span class="team">Egypte</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>16 jun</strong>00:00</span><span class="team right">Saoedi-Arabië</span><span class="vs">vs</span><span class="team">Uruguay</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>16 jun</strong>03:00</span><span class="team right">Iran</span><span class="vs">vs</span><span class="team">Nieuw-Zeeland</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>16 jun</strong>21:00</span><span class="team right">Frankrijk</span><span class="vs">vs</span><span class="team">Senegal</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>17 jun</strong>00:00</span><span class="team right">Irak</span><span class="vs">vs</span><span class="team">Noorwegen</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>17 jun</strong>03:00</span><span class="team right">Argentinië</span><span class="vs">vs</span><span class="team">Algerije</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>17 jun</strong>06:00</span><span class="team right">Oostenrijk</span><span class="vs">vs</span><span class="team">Jordanië</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>17 jun</strong>19:00</span><span class="team right">Portugal</span><span class="vs">vs</span><span class="team">Congo-Kinshasa</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>17 jun</strong>22:00</span><span class="team right">Engeland</span><span class="vs">vs</span><span class="team">Kroatië</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>18 jun</strong>01:00</span><span class="team right">Ghana</span><span class="vs">vs</span><span class="team">Panama</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>18 jun</strong>04:00</span><span class="team right">Oezbekistan</span><span class="vs">vs</span><span class="team">Colombia</span><span class="stad">–</span></div>
+        
+        
+        
+        
+        <div data-datum="2026-06-13" class="match" data-nl="false"><span class="match-datum"><strong>13 jun</strong>21:00</span><span class="team right">Qatar</span><span class="vs">vs</span><span class="team">Zwitserland</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-14" class="match" data-nl="false"><span class="match-datum"><strong>14 jun</strong>00:00</span><span class="team right">Brazilië</span><span class="vs">vs</span><span class="team">Marokko</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-14" class="match" data-nl="false"><span class="match-datum"><strong>14 jun</strong>03:00</span><span class="team right">Haïti</span><span class="vs">vs</span><span class="team">Schotland</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-14" class="match" data-nl="false"><span class="match-datum"><strong>14 jun</strong>06:00</span><span class="team right">Australië</span><span class="vs">vs</span><span class="team">Turkije</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-14" class="match" data-nl="false"><span class="match-datum"><strong>14 jun</strong>19:00</span><span class="team right">Duitsland</span><span class="vs">vs</span><span class="team">Curaçao</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-14" class="match nl" data-nl="true"><span class="match-datum"><strong>14 jun</strong>22:00</span><span class="team right nl-team">🇳🇱 Nederland</span><span class="vs">vs</span><span class="team">Japan</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-15" class="match" data-nl="false"><span class="match-datum"><strong>15 jun</strong>01:00</span><span class="team right">Ivoorkust</span><span class="vs">vs</span><span class="team">Ecuador</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-15" class="match" data-nl="false"><span class="match-datum"><strong>15 jun</strong>04:00</span><span class="team right">Zweden</span><span class="vs">vs</span><span class="team">Tunesië</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-15" class="match" data-nl="false"><span class="match-datum"><strong>15 jun</strong>18:00</span><span class="team right">Spanje</span><span class="vs">vs</span><span class="team">Kaapverdië</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-15" class="match" data-nl="false"><span class="match-datum"><strong>15 jun</strong>21:00</span><span class="team right">België</span><span class="vs">vs</span><span class="team">Egypte</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-16" class="match" data-nl="false"><span class="match-datum"><strong>16 jun</strong>00:00</span><span class="team right">Saoedi-Arabië</span><span class="vs">vs</span><span class="team">Uruguay</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-16" class="match" data-nl="false"><span class="match-datum"><strong>16 jun</strong>03:00</span><span class="team right">Iran</span><span class="vs">vs</span><span class="team">Nieuw-Zeeland</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-16" class="match" data-nl="false"><span class="match-datum"><strong>16 jun</strong>21:00</span><span class="team right">Frankrijk</span><span class="vs">vs</span><span class="team">Senegal</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-17" class="match" data-nl="false"><span class="match-datum"><strong>17 jun</strong>00:00</span><span class="team right">Irak</span><span class="vs">vs</span><span class="team">Noorwegen</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-17" class="match" data-nl="false"><span class="match-datum"><strong>17 jun</strong>03:00</span><span class="team right">Argentinië</span><span class="vs">vs</span><span class="team">Algerije</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-17" class="match" data-nl="false"><span class="match-datum"><strong>17 jun</strong>06:00</span><span class="team right">Oostenrijk</span><span class="vs">vs</span><span class="team">Jordanië</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-17" class="match" data-nl="false"><span class="match-datum"><strong>17 jun</strong>19:00</span><span class="team right">Portugal</span><span class="vs">vs</span><span class="team">Congo-Kinshasa</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-17" class="match" data-nl="false"><span class="match-datum"><strong>17 jun</strong>22:00</span><span class="team right">Engeland</span><span class="vs">vs</span><span class="team">Kroatië</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-18" class="match" data-nl="false"><span class="match-datum"><strong>18 jun</strong>01:00</span><span class="team right">Ghana</span><span class="vs">vs</span><span class="team">Panama</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-18" class="match" data-nl="false"><span class="match-datum"><strong>18 jun</strong>04:00</span><span class="team right">Oezbekistan</span><span class="vs">vs</span><span class="team">Colombia</span><span class="stad">–</span></div>
 
         <div class="ronde-hdr">Speelronde 2</div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>18 jun</strong>18:00</span><span class="team right">Tsjechië</span><span class="vs">vs</span><span class="team">Zuid-Afrika</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>18 jun</strong>21:00</span><span class="team right">Zwitserland</span><span class="vs">vs</span><span class="team">Bosnië Herzegovina</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>19 jun</strong>00:00</span><span class="team right">Canada</span><span class="vs">vs</span><span class="team">Qatar</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>19 jun</strong>03:00</span><span class="team right">Mexico</span><span class="vs">vs</span><span class="team">Zuid-Korea</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>19 jun</strong>21:00</span><span class="team right">Verenigde Staten</span><span class="vs">vs</span><span class="team">Australië</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>20 jun</strong>00:00</span><span class="team right">Schotland</span><span class="vs">vs</span><span class="team">Marokko</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>20 jun</strong>02:30</span><span class="team right">Brazilië</span><span class="vs">vs</span><span class="team">Haïti</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>20 jun</strong>05:00</span><span class="team right">Turkije</span><span class="vs">vs</span><span class="team">Paraguay</span><span class="stad">–</span></div>
-        <div class="match nl" data-nl="true"><span class="match-datum"><strong>20 jun</strong>19:00</span><span class="team right nl-team">🇳🇱 Nederland</span><span class="vs">vs</span><span class="team">Zweden</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>20 jun</strong>22:00</span><span class="team right">Duitsland</span><span class="vs">vs</span><span class="team">Ivoorkust</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>21 jun</strong>02:00</span><span class="team right">Ecuador</span><span class="vs">vs</span><span class="team">Curaçao</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>21 jun</strong>06:00</span><span class="team right">Tunesië</span><span class="vs">vs</span><span class="team">Japan</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>21 jun</strong>18:00</span><span class="team right">Spanje</span><span class="vs">vs</span><span class="team">Saoedi-Arabië</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>21 jun</strong>21:00</span><span class="team right">België</span><span class="vs">vs</span><span class="team">Iran</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>22 jun</strong>00:00</span><span class="team right">Uruguay</span><span class="vs">vs</span><span class="team">Kaapverdië</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>22 jun</strong>03:00</span><span class="team right">Nieuw-Zeeland</span><span class="vs">vs</span><span class="team">Egypte</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>22 jun</strong>19:00</span><span class="team right">Argentinië</span><span class="vs">vs</span><span class="team">Oostenrijk</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>22 jun</strong>23:00</span><span class="team right">Frankrijk</span><span class="vs">vs</span><span class="team">Irak</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>23 jun</strong>02:00</span><span class="team right">Noorwegen</span><span class="vs">vs</span><span class="team">Senegal</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>23 jun</strong>05:00</span><span class="team right">Jordanië</span><span class="vs">vs</span><span class="team">Algerije</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>23 jun</strong>19:00</span><span class="team right">Portugal</span><span class="vs">vs</span><span class="team">Oezbekistan</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>23 jun</strong>22:00</span><span class="team right">Engeland</span><span class="vs">vs</span><span class="team">Ghana</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>24 jun</strong>01:00</span><span class="team right">Panama</span><span class="vs">vs</span><span class="team">Kroatië</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>24 jun</strong>04:00</span><span class="team right">Colombia</span><span class="vs">vs</span><span class="team">Congo-Kinshasa</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-18" class="match" data-nl="false"><span class="match-datum"><strong>18 jun</strong>18:00</span><span class="team right">Tsjechië</span><span class="vs">vs</span><span class="team">Zuid-Afrika</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-18" class="match" data-nl="false"><span class="match-datum"><strong>18 jun</strong>21:00</span><span class="team right">Zwitserland</span><span class="vs">vs</span><span class="team">Bosnië Herzegovina</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-19" class="match" data-nl="false"><span class="match-datum"><strong>19 jun</strong>00:00</span><span class="team right">Canada</span><span class="vs">vs</span><span class="team">Qatar</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-19" class="match" data-nl="false"><span class="match-datum"><strong>19 jun</strong>03:00</span><span class="team right">Mexico</span><span class="vs">vs</span><span class="team">Zuid-Korea</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-19" class="match" data-nl="false"><span class="match-datum"><strong>19 jun</strong>21:00</span><span class="team right">Verenigde Staten</span><span class="vs">vs</span><span class="team">Australië</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-20" class="match" data-nl="false"><span class="match-datum"><strong>20 jun</strong>00:00</span><span class="team right">Schotland</span><span class="vs">vs</span><span class="team">Marokko</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-20" class="match" data-nl="false"><span class="match-datum"><strong>20 jun</strong>02:30</span><span class="team right">Brazilië</span><span class="vs">vs</span><span class="team">Haïti</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-20" class="match" data-nl="false"><span class="match-datum"><strong>20 jun</strong>05:00</span><span class="team right">Turkije</span><span class="vs">vs</span><span class="team">Paraguay</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-20" class="match nl" data-nl="true"><span class="match-datum"><strong>20 jun</strong>19:00</span><span class="team right nl-team">🇳🇱 Nederland</span><span class="vs">vs</span><span class="team">Zweden</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-20" class="match" data-nl="false"><span class="match-datum"><strong>20 jun</strong>22:00</span><span class="team right">Duitsland</span><span class="vs">vs</span><span class="team">Ivoorkust</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-21" class="match" data-nl="false"><span class="match-datum"><strong>21 jun</strong>02:00</span><span class="team right">Ecuador</span><span class="vs">vs</span><span class="team">Curaçao</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-21" class="match" data-nl="false"><span class="match-datum"><strong>21 jun</strong>06:00</span><span class="team right">Tunesië</span><span class="vs">vs</span><span class="team">Japan</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-21" class="match" data-nl="false"><span class="match-datum"><strong>21 jun</strong>18:00</span><span class="team right">Spanje</span><span class="vs">vs</span><span class="team">Saoedi-Arabië</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-21" class="match" data-nl="false"><span class="match-datum"><strong>21 jun</strong>21:00</span><span class="team right">België</span><span class="vs">vs</span><span class="team">Iran</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-22" class="match" data-nl="false"><span class="match-datum"><strong>22 jun</strong>00:00</span><span class="team right">Uruguay</span><span class="vs">vs</span><span class="team">Kaapverdië</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-22" class="match" data-nl="false"><span class="match-datum"><strong>22 jun</strong>03:00</span><span class="team right">Nieuw-Zeeland</span><span class="vs">vs</span><span class="team">Egypte</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-22" class="match" data-nl="false"><span class="match-datum"><strong>22 jun</strong>19:00</span><span class="team right">Argentinië</span><span class="vs">vs</span><span class="team">Oostenrijk</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-22" class="match" data-nl="false"><span class="match-datum"><strong>22 jun</strong>23:00</span><span class="team right">Frankrijk</span><span class="vs">vs</span><span class="team">Irak</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-23" class="match" data-nl="false"><span class="match-datum"><strong>23 jun</strong>02:00</span><span class="team right">Noorwegen</span><span class="vs">vs</span><span class="team">Senegal</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-23" class="match" data-nl="false"><span class="match-datum"><strong>23 jun</strong>05:00</span><span class="team right">Jordanië</span><span class="vs">vs</span><span class="team">Algerije</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-23" class="match" data-nl="false"><span class="match-datum"><strong>23 jun</strong>19:00</span><span class="team right">Portugal</span><span class="vs">vs</span><span class="team">Oezbekistan</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-23" class="match" data-nl="false"><span class="match-datum"><strong>23 jun</strong>22:00</span><span class="team right">Engeland</span><span class="vs">vs</span><span class="team">Ghana</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-24" class="match" data-nl="false"><span class="match-datum"><strong>24 jun</strong>01:00</span><span class="team right">Panama</span><span class="vs">vs</span><span class="team">Kroatië</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-24" class="match" data-nl="false"><span class="match-datum"><strong>24 jun</strong>04:00</span><span class="team right">Colombia</span><span class="vs">vs</span><span class="team">Congo-Kinshasa</span><span class="stad">–</span></div>
 
         <div class="ronde-hdr">Speelronde 3</div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>24 jun</strong>21:00</span><span class="team right">Zwitserland</span><span class="vs">vs</span><span class="team">Canada</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>24 jun</strong>21:00</span><span class="team right">Bosnië Herzegovina</span><span class="vs">vs</span><span class="team">Qatar</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>25 jun</strong>00:00</span><span class="team right">Schotland</span><span class="vs">vs</span><span class="team">Brazilië</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>25 jun</strong>00:00</span><span class="team right">Marokko</span><span class="vs">vs</span><span class="team">Haïti</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>25 jun</strong>03:00</span><span class="team right">Zuid-Afrika</span><span class="vs">vs</span><span class="team">Zuid-Korea</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>25 jun</strong>03:00</span><span class="team right">Tsjechië</span><span class="vs">vs</span><span class="team">Mexico</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>25 jun</strong>22:00</span><span class="team right">Ecuador</span><span class="vs">vs</span><span class="team">Duitsland</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>25 jun</strong>22:00</span><span class="team right">Curaçao</span><span class="vs">vs</span><span class="team">Ivoorkust</span><span class="stad">–</span></div>
-        <div class="match nl" data-nl="true"><span class="match-datum"><strong>26 jun</strong>01:00</span><span class="team right nl-team">Tunesië</span><span class="vs">vs</span><span class="team nl-team">🇳🇱 Nederland</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>26 jun</strong>01:00</span><span class="team right">Japan</span><span class="vs">vs</span><span class="team">Zweden</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>26 jun</strong>04:00</span><span class="team right">Paraguay</span><span class="vs">vs</span><span class="team">Australië</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>26 jun</strong>04:00</span><span class="team right">Turkije</span><span class="vs">vs</span><span class="team">Verenigde Staten</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>26 jun</strong>21:00</span><span class="team right">Noorwegen</span><span class="vs">vs</span><span class="team">Frankrijk</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>26 jun</strong>21:00</span><span class="team right">Senegal</span><span class="vs">vs</span><span class="team">Irak</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>27 jun</strong>02:00</span><span class="team right">Uruguay</span><span class="vs">vs</span><span class="team">Spanje</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>27 jun</strong>02:00</span><span class="team right">Kaapverdië</span><span class="vs">vs</span><span class="team">Saoedi-Arabië</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>27 jun</strong>05:00</span><span class="team right">Nieuw-Zeeland</span><span class="vs">vs</span><span class="team">België</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>27 jun</strong>05:00</span><span class="team right">Egypte</span><span class="vs">vs</span><span class="team">Iran</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>27 jun</strong>23:00</span><span class="team right">Panama</span><span class="vs">vs</span><span class="team">Engeland</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>27 jun</strong>23:00</span><span class="team right">Kroatië</span><span class="vs">vs</span><span class="team">Ghana</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>28 jun</strong>01:30</span><span class="team right">Colombia</span><span class="vs">vs</span><span class="team">Portugal</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>28 jun</strong>01:30</span><span class="team right">Congo-Kinshasa</span><span class="vs">vs</span><span class="team">Oezbekistan</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>28 jun</strong>04:00</span><span class="team right">Jordanië</span><span class="vs">vs</span><span class="team">Argentinië</span><span class="stad">–</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>28 jun</strong>04:00</span><span class="team right">Algerije</span><span class="vs">vs</span><span class="team">Oostenrijk</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-24" class="match" data-nl="false"><span class="match-datum"><strong>24 jun</strong>21:00</span><span class="team right">Zwitserland</span><span class="vs">vs</span><span class="team">Canada</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-24" class="match" data-nl="false"><span class="match-datum"><strong>24 jun</strong>21:00</span><span class="team right">Bosnië Herzegovina</span><span class="vs">vs</span><span class="team">Qatar</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-25" class="match" data-nl="false"><span class="match-datum"><strong>25 jun</strong>00:00</span><span class="team right">Schotland</span><span class="vs">vs</span><span class="team">Brazilië</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-25" class="match" data-nl="false"><span class="match-datum"><strong>25 jun</strong>00:00</span><span class="team right">Marokko</span><span class="vs">vs</span><span class="team">Haïti</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-25" class="match" data-nl="false"><span class="match-datum"><strong>25 jun</strong>03:00</span><span class="team right">Zuid-Afrika</span><span class="vs">vs</span><span class="team">Zuid-Korea</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-25" class="match" data-nl="false"><span class="match-datum"><strong>25 jun</strong>03:00</span><span class="team right">Tsjechië</span><span class="vs">vs</span><span class="team">Mexico</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-25" class="match" data-nl="false"><span class="match-datum"><strong>25 jun</strong>22:00</span><span class="team right">Ecuador</span><span class="vs">vs</span><span class="team">Duitsland</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-25" class="match" data-nl="false"><span class="match-datum"><strong>25 jun</strong>22:00</span><span class="team right">Curaçao</span><span class="vs">vs</span><span class="team">Ivoorkust</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-26" class="match nl" data-nl="true"><span class="match-datum"><strong>26 jun</strong>01:00</span><span class="team right nl-team">Tunesië</span><span class="vs">vs</span><span class="team nl-team">🇳🇱 Nederland</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-26" class="match" data-nl="false"><span class="match-datum"><strong>26 jun</strong>01:00</span><span class="team right">Japan</span><span class="vs">vs</span><span class="team">Zweden</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-26" class="match" data-nl="false"><span class="match-datum"><strong>26 jun</strong>04:00</span><span class="team right">Paraguay</span><span class="vs">vs</span><span class="team">Australië</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-26" class="match" data-nl="false"><span class="match-datum"><strong>26 jun</strong>04:00</span><span class="team right">Turkije</span><span class="vs">vs</span><span class="team">Verenigde Staten</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-26" class="match" data-nl="false"><span class="match-datum"><strong>26 jun</strong>21:00</span><span class="team right">Noorwegen</span><span class="vs">vs</span><span class="team">Frankrijk</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-26" class="match" data-nl="false"><span class="match-datum"><strong>26 jun</strong>21:00</span><span class="team right">Senegal</span><span class="vs">vs</span><span class="team">Irak</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-27" class="match" data-nl="false"><span class="match-datum"><strong>27 jun</strong>02:00</span><span class="team right">Uruguay</span><span class="vs">vs</span><span class="team">Spanje</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-27" class="match" data-nl="false"><span class="match-datum"><strong>27 jun</strong>02:00</span><span class="team right">Kaapverdië</span><span class="vs">vs</span><span class="team">Saoedi-Arabië</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-27" class="match" data-nl="false"><span class="match-datum"><strong>27 jun</strong>05:00</span><span class="team right">Nieuw-Zeeland</span><span class="vs">vs</span><span class="team">België</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-27" class="match" data-nl="false"><span class="match-datum"><strong>27 jun</strong>05:00</span><span class="team right">Egypte</span><span class="vs">vs</span><span class="team">Iran</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-27" class="match" data-nl="false"><span class="match-datum"><strong>27 jun</strong>23:00</span><span class="team right">Panama</span><span class="vs">vs</span><span class="team">Engeland</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-27" class="match" data-nl="false"><span class="match-datum"><strong>27 jun</strong>23:00</span><span class="team right">Kroatië</span><span class="vs">vs</span><span class="team">Ghana</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-28" class="match" data-nl="false"><span class="match-datum"><strong>28 jun</strong>01:30</span><span class="team right">Colombia</span><span class="vs">vs</span><span class="team">Portugal</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-28" class="match" data-nl="false"><span class="match-datum"><strong>28 jun</strong>01:30</span><span class="team right">Congo-Kinshasa</span><span class="vs">vs</span><span class="team">Oezbekistan</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-28" class="match" data-nl="false"><span class="match-datum"><strong>28 jun</strong>04:00</span><span class="team right">Jordanië</span><span class="vs">vs</span><span class="team">Argentinië</span><span class="stad">–</span></div>
+        <div data-datum="2026-06-28" class="match" data-nl="false"><span class="match-datum"><strong>28 jun</strong>04:00</span><span class="team right">Algerije</span><span class="vs">vs</span><span class="team">Oostenrijk</span><span class="stad">–</span></div>
 
       </div>
     </div>
@@ -222,48 +224,48 @@
       <div class="wedstrijden">
 
         <div class="ronde-hdr">Zestiende finales (28 jun – 4 jul)</div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>28 jun</strong>21:00</span><span class="team right">#73 · 2A</span><span class="vs">vs</span><span class="team">2B</span><span class="stad">Los Angeles</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>29 jun</strong>19:00</span><span class="team right">#76 · 1C</span><span class="vs">vs</span><span class="team">2F</span><span class="stad">Houston</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>29 jun</strong>22:30</span><span class="team right">#74 · 1E</span><span class="vs">vs</span><span class="team">Beste nr.3</span><span class="stad">Boston</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>30 jun</strong>03:00</span><span class="team right">#75 · 1F</span><span class="vs">vs</span><span class="team">2C</span><span class="stad">Monterrey</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>30 jun</strong>19:00</span><span class="team right">#78 · 2E</span><span class="vs">vs</span><span class="team">2I</span><span class="stad">Dallas</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>30 jun</strong>23:00</span><span class="team right">#77 · 1I</span><span class="vs">vs</span><span class="team">Beste nr.3</span><span class="stad">New York</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>1 jul</strong>03:00</span><span class="team right">#79 · 1A</span><span class="vs">vs</span><span class="team">Beste nr.3</span><span class="stad">Mexico-Stad</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>1 jul</strong>18:00</span><span class="team right">#80 · 1L</span><span class="vs">vs</span><span class="team">Beste nr.3</span><span class="stad">Atlanta</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>1 jul</strong>22:00</span><span class="team right">#82 · 1G</span><span class="vs">vs</span><span class="team">Beste nr.3</span><span class="stad">Seattle</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>2 jul</strong>02:00</span><span class="team right">#81 · 1D</span><span class="vs">vs</span><span class="team">Beste nr.3</span><span class="stad">San Francisco</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>2 jul</strong>21:00</span><span class="team right">#84 · 1H</span><span class="vs">vs</span><span class="team">2J</span><span class="stad">Los Angeles</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>3 jul</strong>01:00</span><span class="team right">#83 · 2K</span><span class="vs">vs</span><span class="team">2L</span><span class="stad">Toronto</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>3 jul</strong>05:00</span><span class="team right">#85 · 1B</span><span class="vs">vs</span><span class="team">Beste nr.3</span><span class="stad">Vancouver</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>3 jul</strong>20:00</span><span class="team right">#88 · 2D</span><span class="vs">vs</span><span class="team">2G</span><span class="stad">Dallas</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>4 jul</strong>00:00</span><span class="team right">#86 · 1J</span><span class="vs">vs</span><span class="team">2H</span><span class="stad">Miami</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>4 jul</strong>03:30</span><span class="team right">#87 · 1K</span><span class="vs">vs</span><span class="team">Beste nr.3</span><span class="stad">Kansas City</span></div>
+        <div data-datum="2026-06-28" class="match" data-nl="false"><span class="match-datum"><strong>28 jun</strong>21:00</span><span class="team right">#73 · 2A</span><span class="vs">vs</span><span class="team">2B</span><span class="stad">Los Angeles</span></div>
+        <div data-datum="2026-06-29" class="match" data-nl="false"><span class="match-datum"><strong>29 jun</strong>19:00</span><span class="team right">#76 · 1C</span><span class="vs">vs</span><span class="team">2F</span><span class="stad">Houston</span></div>
+        <div data-datum="2026-06-29" class="match" data-nl="false"><span class="match-datum"><strong>29 jun</strong>22:30</span><span class="team right">#74 · 1E</span><span class="vs">vs</span><span class="team">Beste nr.3</span><span class="stad">Boston</span></div>
+        <div data-datum="2026-06-30" class="match" data-nl="false"><span class="match-datum"><strong>30 jun</strong>03:00</span><span class="team right">#75 · 1F</span><span class="vs">vs</span><span class="team">2C</span><span class="stad">Monterrey</span></div>
+        <div data-datum="2026-06-30" class="match" data-nl="false"><span class="match-datum"><strong>30 jun</strong>19:00</span><span class="team right">#78 · 2E</span><span class="vs">vs</span><span class="team">2I</span><span class="stad">Dallas</span></div>
+        <div data-datum="2026-06-30" class="match" data-nl="false"><span class="match-datum"><strong>30 jun</strong>23:00</span><span class="team right">#77 · 1I</span><span class="vs">vs</span><span class="team">Beste nr.3</span><span class="stad">New York</span></div>
+        <div data-datum="2026-07-01" class="match" data-nl="false"><span class="match-datum"><strong>1 jul</strong>03:00</span><span class="team right">#79 · 1A</span><span class="vs">vs</span><span class="team">Beste nr.3</span><span class="stad">Mexico-Stad</span></div>
+        <div data-datum="2026-07-01" class="match" data-nl="false"><span class="match-datum"><strong>1 jul</strong>18:00</span><span class="team right">#80 · 1L</span><span class="vs">vs</span><span class="team">Beste nr.3</span><span class="stad">Atlanta</span></div>
+        <div data-datum="2026-07-01" class="match" data-nl="false"><span class="match-datum"><strong>1 jul</strong>22:00</span><span class="team right">#82 · 1G</span><span class="vs">vs</span><span class="team">Beste nr.3</span><span class="stad">Seattle</span></div>
+        <div data-datum="2026-07-02" class="match" data-nl="false"><span class="match-datum"><strong>2 jul</strong>02:00</span><span class="team right">#81 · 1D</span><span class="vs">vs</span><span class="team">Beste nr.3</span><span class="stad">San Francisco</span></div>
+        <div data-datum="2026-07-02" class="match" data-nl="false"><span class="match-datum"><strong>2 jul</strong>21:00</span><span class="team right">#84 · 1H</span><span class="vs">vs</span><span class="team">2J</span><span class="stad">Los Angeles</span></div>
+        <div data-datum="2026-07-03" class="match" data-nl="false"><span class="match-datum"><strong>3 jul</strong>01:00</span><span class="team right">#83 · 2K</span><span class="vs">vs</span><span class="team">2L</span><span class="stad">Toronto</span></div>
+        <div data-datum="2026-07-03" class="match" data-nl="false"><span class="match-datum"><strong>3 jul</strong>05:00</span><span class="team right">#85 · 1B</span><span class="vs">vs</span><span class="team">Beste nr.3</span><span class="stad">Vancouver</span></div>
+        <div data-datum="2026-07-03" class="match" data-nl="false"><span class="match-datum"><strong>3 jul</strong>20:00</span><span class="team right">#88 · 2D</span><span class="vs">vs</span><span class="team">2G</span><span class="stad">Dallas</span></div>
+        <div data-datum="2026-07-04" class="match" data-nl="false"><span class="match-datum"><strong>4 jul</strong>00:00</span><span class="team right">#86 · 1J</span><span class="vs">vs</span><span class="team">2H</span><span class="stad">Miami</span></div>
+        <div data-datum="2026-07-04" class="match" data-nl="false"><span class="match-datum"><strong>4 jul</strong>03:30</span><span class="team right">#87 · 1K</span><span class="vs">vs</span><span class="team">Beste nr.3</span><span class="stad">Kansas City</span></div>
 
         <div class="ronde-hdr">Achtste finales (4–7 jul)</div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>4 jul</strong>19:00</span><span class="team right">#89 · W73</span><span class="vs">vs</span><span class="team">W75</span><span class="stad">Houston</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>4 jul</strong>23:00</span><span class="team right">#90 · W74</span><span class="vs">vs</span><span class="team">W77</span><span class="stad">Philadelphia</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>5 jul</strong>22:00</span><span class="team right">#91 · W76</span><span class="vs">vs</span><span class="team">W78</span><span class="stad">New York</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>6 jul</strong>02:00</span><span class="team right">#92 · W79</span><span class="vs">vs</span><span class="team">W80</span><span class="stad">Mexico-Stad</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>6 jul</strong>21:00</span><span class="team right">#93 · W83</span><span class="vs">vs</span><span class="team">W84</span><span class="stad">Dallas</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>7 jul</strong>02:00</span><span class="team right">#94 · W81</span><span class="vs">vs</span><span class="team">W82</span><span class="stad">Seattle</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>7 jul</strong>18:00</span><span class="team right">#95 · W86</span><span class="vs">vs</span><span class="team">W88</span><span class="stad">Atlanta</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>7 jul</strong>22:00</span><span class="team right">#96 · W85</span><span class="vs">vs</span><span class="team">W87</span><span class="stad">Vancouver</span></div>
+        <div data-datum="2026-07-04" class="match" data-nl="false"><span class="match-datum"><strong>4 jul</strong>19:00</span><span class="team right">#89 · W73</span><span class="vs">vs</span><span class="team">W75</span><span class="stad">Houston</span></div>
+        <div data-datum="2026-07-04" class="match" data-nl="false"><span class="match-datum"><strong>4 jul</strong>23:00</span><span class="team right">#90 · W74</span><span class="vs">vs</span><span class="team">W77</span><span class="stad">Philadelphia</span></div>
+        <div data-datum="2026-07-05" class="match" data-nl="false"><span class="match-datum"><strong>5 jul</strong>22:00</span><span class="team right">#91 · W76</span><span class="vs">vs</span><span class="team">W78</span><span class="stad">New York</span></div>
+        <div data-datum="2026-07-06" class="match" data-nl="false"><span class="match-datum"><strong>6 jul</strong>02:00</span><span class="team right">#92 · W79</span><span class="vs">vs</span><span class="team">W80</span><span class="stad">Mexico-Stad</span></div>
+        <div data-datum="2026-07-06" class="match" data-nl="false"><span class="match-datum"><strong>6 jul</strong>21:00</span><span class="team right">#93 · W83</span><span class="vs">vs</span><span class="team">W84</span><span class="stad">Dallas</span></div>
+        <div data-datum="2026-07-07" class="match" data-nl="false"><span class="match-datum"><strong>7 jul</strong>02:00</span><span class="team right">#94 · W81</span><span class="vs">vs</span><span class="team">W82</span><span class="stad">Seattle</span></div>
+        <div data-datum="2026-07-07" class="match" data-nl="false"><span class="match-datum"><strong>7 jul</strong>18:00</span><span class="team right">#95 · W86</span><span class="vs">vs</span><span class="team">W88</span><span class="stad">Atlanta</span></div>
+        <div data-datum="2026-07-07" class="match" data-nl="false"><span class="match-datum"><strong>7 jul</strong>22:00</span><span class="team right">#96 · W85</span><span class="vs">vs</span><span class="team">W87</span><span class="stad">Vancouver</span></div>
 
         <div class="ronde-hdr">Kwartfinales (9–12 jul)</div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>9 jul</strong>22:00</span><span class="team right">#97 · W89</span><span class="vs">vs</span><span class="team">W90</span><span class="stad">Boston</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>10 jul</strong>21:00</span><span class="team right">#98 · W93</span><span class="vs">vs</span><span class="team">W94</span><span class="stad">Los Angeles</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>11 jul</strong>23:00</span><span class="team right">#99 · W91</span><span class="vs">vs</span><span class="team">W92</span><span class="stad">Miami</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>12 jul</strong>03:00</span><span class="team right">#100 · W95</span><span class="vs">vs</span><span class="team">W96</span><span class="stad">Kansas City</span></div>
+        <div data-datum="2026-07-09" class="match" data-nl="false"><span class="match-datum"><strong>9 jul</strong>22:00</span><span class="team right">#97 · W89</span><span class="vs">vs</span><span class="team">W90</span><span class="stad">Boston</span></div>
+        <div data-datum="2026-07-10" class="match" data-nl="false"><span class="match-datum"><strong>10 jul</strong>21:00</span><span class="team right">#98 · W93</span><span class="vs">vs</span><span class="team">W94</span><span class="stad">Los Angeles</span></div>
+        <div data-datum="2026-07-11" class="match" data-nl="false"><span class="match-datum"><strong>11 jul</strong>23:00</span><span class="team right">#99 · W91</span><span class="vs">vs</span><span class="team">W92</span><span class="stad">Miami</span></div>
+        <div data-datum="2026-07-12" class="match" data-nl="false"><span class="match-datum"><strong>12 jul</strong>03:00</span><span class="team right">#100 · W95</span><span class="vs">vs</span><span class="team">W96</span><span class="stad">Kansas City</span></div>
 
         <div class="ronde-hdr">Halve finales (14–15 jul)</div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>14 jul</strong>21:00</span><span class="team right">#101 · W97</span><span class="vs">vs</span><span class="team">W98</span><span class="stad">Dallas</span></div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>15 jul</strong>21:00</span><span class="team right">#102 · W99</span><span class="vs">vs</span><span class="team">W100</span><span class="stad">Atlanta</span></div>
+        <div data-datum="2026-07-14" class="match" data-nl="false"><span class="match-datum"><strong>14 jul</strong>21:00</span><span class="team right">#101 · W97</span><span class="vs">vs</span><span class="team">W98</span><span class="stad">Dallas</span></div>
+        <div data-datum="2026-07-15" class="match" data-nl="false"><span class="match-datum"><strong>15 jul</strong>21:00</span><span class="team right">#102 · W99</span><span class="vs">vs</span><span class="team">W100</span><span class="stad">Atlanta</span></div>
 
         <div class="ronde-hdr">Troostfinale – 3e plaats (18 jul)</div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>18 jul</strong>23:00</span><span class="team right">#103 · V101</span><span class="vs">vs</span><span class="team">V102</span><span class="stad">Miami</span></div>
+        <div data-datum="2026-07-18" class="match" data-nl="false"><span class="match-datum"><strong>18 jul</strong>23:00</span><span class="team right">#103 · V101</span><span class="vs">vs</span><span class="team">V102</span><span class="stad">Miami</span></div>
 
         <div class="ronde-hdr">🏆 Finale (19 jul)</div>
-        <div class="match" data-nl="false"><span class="match-datum"><strong>19 jul</strong>21:00</span><span class="team right">#104 · W101</span><span class="vs">vs</span><span class="team">W102</span><span class="stad">New York/NJ</span></div>
+        <div data-datum="2026-07-19" class="match" data-nl="false"><span class="match-datum"><strong>19 jul</strong>21:00</span><span class="team right">#104 · W101</span><span class="vs">vs</span><span class="team">W102</span><span class="stad">New York/NJ</span></div>
 
       </div>
     </div>
@@ -282,7 +284,7 @@
 <div style="position:fixed;bottom:8px;right:12px;font-size:.7rem;
   color:rgba(255,255,255,.4);background:rgba(0,0,0,.3);
   padding:2px 8px;border-radius:10px;pointer-events:none;">
-  v2.0 – jun 2026
+  v1.1 – mei 2026
 </div>
 
 <script>
