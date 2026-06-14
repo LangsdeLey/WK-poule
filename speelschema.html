@@ -89,6 +89,10 @@
     .stad { display:none; }
     .team { font-size:.8rem; }
   }
+  .update-badge { text-align:center; margin-bottom:18px; }
+  .update-badge span { background:var(--navy); color:rgba(255,255,255,.7);
+    font-size:.8rem; padding:5px 14px; border-radius:20px; display:inline-block; }
+  .update-badge strong { color:var(--gold-light); }
 </style>
 </head>
 <body id="top">
@@ -108,14 +112,15 @@
 
 <div class="container">
 
-   <div class="nav-links">
-    <a href="index.html">📊 Puntentelling</a>
-    <a href="scorebord.html" >🏆 Scorebord</a>
-    <a href="uitslagen.html" >📋 Uitslagen</a>
-    
-    <a href="speelschema.html" class='active'>📅 Speelschema</a>
+   
+  <div class="nav-links">
+    <a href="index.html">🏆 Scorebord</a>
+    <a href="uitslagen.html">📋 Uitslagen</a>
+    <a href="speelschema.html" class="active">📅 Speelschema</a>
+    <a href="puntentelling.html">📊 Puntentelling</a>
   </div>
   
+    <div class="update-badge"><span>Laatste update: <strong>14 June 2026 om 10:10</strong></span></div>
   <div class="filter-tabs">
     <button class="ftab active" onclick="setFilter('all',this)">Alle wedstrijden</button>
     <button class="ftab nl" onclick="setFilter('nl',this)">🇳🇱 Alleen Nederland</button>
