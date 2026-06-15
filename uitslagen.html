@@ -11,7 +11,7 @@
   :root { --navy:#0d2a54; --gold:#c9952a; --gold-light:#f0b93a;
     --oranje:#FF6600; --off-white:#f7f5f0; --gray:#e8e4dc; }
   * { box-sizing:border-box; margin:0; padding:0; }
-  body { font-family:'DM Sans',sans-serif; background:var(--off-white); color:#1a1a2e; }
+  body { font-family:'DM Sans',sans-serif; background:var(--off-white); color:#1a1a2e; overflow-y:scroll; }
   header { background:var(--navy); }
   .header-inner { max-width:900px; margin:0 auto; padding:20px;
     display:flex; flex-direction:column; align-items:center; gap:12px; }
@@ -96,8 +96,15 @@
 </header>
 <div class="gold-bar"></div>
 <div class="container">
-  <div class="nav-links"><a href="index.html" >🏆 Scorebord</a><a href="uitslagen.html" class="active">📋 Uitslagen</a><a href="speelschema.html">📅 Speelschema</a><a href="puntentelling.html">📊 Puntentelling</a></div>
-  <div class="update-badge"><span>Laatste update: <strong>14 June 2026 om 10:10</strong></span></div>
+  
+  <div class="nav-links">
+    <a href="index.html" >🏆 Poule</a>
+    <a href="uitslagen.html" class='active'>📋 Uitslagen</a>
+    <a href="speelschema.html">📅 Speelschema</a>
+    <a href="puntentelling.html">📊 Puntentelling</a>
+    <a href="https://langsdeley.github.io/WK-poule" target="_blank">🎙️ Terug naar Langs de Ley</a>
+  </div>
+  <div class="update-badge"><span>Laatste update: <strong>15 June 2026 om 16:18</strong></span></div>
 
   <div class="groepen">
   <div class="groep-card">
@@ -244,13 +251,13 @@
     <div class="groep-hdr" >Groep E </div>
     <div class="wedstrijden">
       <div class="wedstrijd ">
-        <span class="team ">Germany</span>
-        <span class="score gepland">–</span>
+        <span class="team bold">Germany</span>
+        <span class="score">7 – 1</span>
         <span class="team right ">Curaçao</span>
       </div>
       <div class="wedstrijd ">
-        <span class="team ">Ivory Coast</span>
-        <span class="score gepland">–</span>
+        <span class="team bold">Ivory Coast</span>
+        <span class="score">1 – 0</span>
         <span class="team right ">Ecuador</span>
       </div>
       <div class="wedstrijd ">
@@ -278,18 +285,18 @@
   <div class="groep-card">
     <div class="groep-hdr" style="background:var(--oranje)">Groep F 🇳🇱</div>
     <div class="wedstrijden">
-      <div class="wedstrijd ">
-        <span class="team ">Netherlands</span>
-        <span class="score gepland">–</span>
+      <div class="wedstrijd nl">
+        <span class="team ">Nederland</span>
+        <span class="score">2 – 2</span>
         <span class="team right ">Japan</span>
       </div>
       <div class="wedstrijd ">
-        <span class="team ">Zweden</span>
-        <span class="score gepland">–</span>
+        <span class="team bold">Zweden</span>
+        <span class="score">5 – 1</span>
         <span class="team right ">Tunisia</span>
       </div>
       <div class="wedstrijd ">
-        <span class="team ">Netherlands</span>
+        <span class="team ">Nederland</span>
         <span class="score gepland">–</span>
         <span class="team right ">Zweden</span>
       </div>
@@ -306,7 +313,7 @@
       <div class="wedstrijd ">
         <span class="team ">Tunisia</span>
         <span class="score gepland">–</span>
-        <span class="team right ">Netherlands</span>
+        <span class="team right ">Nederland</span>
       </div>
     </div>
   </div>
@@ -524,6 +531,6 @@
     background:var(--navy);color:white;border-radius:24px;text-decoration:none;
     font-weight:600;font-size:.88rem;width:fit-content;">↑ Terug naar boven</a>
 </div>
-<footer><strong>WK Poule 2026 – Langs de Ley, Den Haag</strong><br>
+<footer><strong>WK Poule 2026 – Langs de Ley</strong><br>
 Uitslagen worden bijgewerkt na elke speelronde</footer>
 </body></html>
